@@ -1,0 +1,146 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Extract_Property_Details"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="city" Type="OutArgument(x:String)" />
+    <x:Property Name="propertyType" Type="OutArgument(x:String)" />
+    <x:Property Name="address" Type="InOutArgument(x:String)" />
+    <x:Property Name="fullAddress" Type="InOutArgument(x:String)" />
+    <x:Property Name="addressJs" Type="InArgument(x:String)" />
+    <x:Property Name="cityJs" Type="InArgument(x:String)" />
+    <x:Property Name="propertyTypeJs" Type="InArgument(x:String)" />
+    <x:Property Name="id" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Extract_Property_Details_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Orchestrator.Client</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.POP3.Activities</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_29">
+    <ui:InjectJsScript DisplayName="Inject js script" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" InputParameter="[id]" ScriptCode="[cityJs]">
+      <ui:InjectJsScript.ScriptOutput>
+        <OutArgument x:TypeArguments="x:String">[fullAddress]</OutArgument>
+      </ui:InjectJsScript.ScriptOutput>
+      <ui:InjectJsScript.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+      </ui:InjectJsScript.Target>
+    </ui:InjectJsScript>
+    <ui:InjectJsScript ContinueOnError="True" DisplayName="Inject js script" sap2010:WorkflowViewState.IdRef="InjectJsScript_2" InputParameter="[id]" ScriptCode="[addressJs]">
+      <ui:InjectJsScript.ScriptOutput>
+        <OutArgument x:TypeArguments="x:String">[address]</OutArgument>
+      </ui:InjectJsScript.ScriptOutput>
+      <ui:InjectJsScript.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+      </ui:InjectJsScript.Target>
+    </ui:InjectJsScript>
+    <ui:InjectJsScript InputParameter="{x:Null}" ContinueOnError="True" DisplayName="Inject js script" sap2010:WorkflowViewState.IdRef="InjectJsScript_9" ScriptCode="[propertyTypeJs]">
+      <ui:InjectJsScript.ScriptOutput>
+        <OutArgument x:TypeArguments="x:String">[propertyType]</OutArgument>
+      </ui:InjectJsScript.ScriptOutput>
+      <ui:InjectJsScript.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+      </ui:InjectJsScript.Target>
+    </ui:InjectJsScript>
+    <Assign sap2010:WorkflowViewState.IdRef="Assign_17">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[address]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[address.Replace("\","-").Replace("\/","-").Replace("&amp;amp","&amp;").Replace("&amp;amp;","&amp;").Replace(":","-").Replace("%","-").Replace("#","-")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[city]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Split(fullAddress,",")(0).Replace("\","-").Replace("/","-").Replace("&amp;amp","&amp;").Replace("&amp;amp;","&amp;").Replace(":","-").Replace("%","-").Replace("#","-")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <sads:DebugSymbol.Symbol>d1dDOlxVc2Vyc1xVc2VyLlJDQ0hOMDA0MlxEb2N1bWVudHNcVWlQYXRoXExvb3BsaW5rIFByb2plY3RcRXh0cmFjdCBQcm9wZXJ0eSBEZXRhaWxzLnhhbWwUVgOAAQ4CAQFXBV4ZAgEZXwVmGQIBEWcFbhkCAQtvBXYOAgEGdwV+DgIBAlkxWT4CAR5XiwFXlQECARxXeVd/AgEaYTFhOgIBF18oXy4CARZfogFfrwECARRfkAFflgECARJpMWk/AgEPZ0JnSAIBDmemAWe4AQIBDHQwdMgBAgEJcTFxOgIBB3wwfNkBAgEFeTF5NwIBAw==</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="InjectJsScript_1" sap:VirtualizedContainerService.HintSize="314,96" />
+      <sap2010:ViewStateData Id="InjectJsScript_2" sap:VirtualizedContainerService.HintSize="314,96" />
+      <sap2010:ViewStateData Id="InjectJsScript_9" sap:VirtualizedContainerService.HintSize="314,96" />
+      <sap2010:ViewStateData Id="Assign_17" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="Sequence_29" sap:VirtualizedContainerService.HintSize="336,692">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Extract_Property_Details_1" sap:VirtualizedContainerService.HintSize="376,1012" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

@@ -1,0 +1,30 @@
+Starboard Commercial - 1 - https://www.starboardnet.com/listing_detail.php?listing_id=1170&aboutUs_id=57 Started Processing
+Starboard Commercial - 1 - https://www.starboardnet.com/listing_detail.php?listing_id=1170&aboutUs_id=57 Ended Successfully
+Starboard Commercial - 2 - https://www.starboardnet.com/listing_detail.php?listing_id=1915&aboutUs_id=57 Started Processing
+Phoenix Commercial Advisors - 1 - 535978-lease Started Processing
+Phoenix Commercial Advisors - 1 - https://buildout.com/plugins/cb25d41a4b6ce6a15322f429e282eed5ee43e4e2/phoenixcommercialadvisors.com/inventory/535978-lease?pluginId=0&iframe=true&embedded=true&cacheSearch=true Ended Successfully
+Phoenix Commercial Advisors - 2 - 526891-lease Started Processing
+Milancap - 1 - services Started Processing
+Milancap - 1 - services Ended Successfully
+Milancap - 2 - study-9 Started Processing
+Milancap - 1 - services Started Processing
+Milancap - 1 - https://www.milancap.com/services Ended Successfully
+Milancap - 2 - study-9 Started Processing
+Milancap - 2 - https://www.milancap.com/study-9 Ended Successfully
+Milancap - 3 - success-stories Started Processing
+Milancap - 3 - https://www.milancap.com/success-stories Ended Successfully
+Milancap - 4 - office-locations-2 Started Processing
+Milancap - 4 - https://www.milancap.com/office-locations-2 Ended Successfully
+Milancap - 5 - park-tower-contact-form Started Processing
+Milancap - 5 - https://www.milancap.com/park-tower-contact-form Ended Successfully
+Milancap - 6 - clipboard2 Started Processing
+Milancap - 6 - https://www.milancap.com/clipboard2 Ended Successfully
+Milancap - 7 - cardel-plaza Started Processing
+Milancap - 7 - https://www.milancap.com/cardel-plaza Ended Successfully
+Milancap - 8 - in-the-news Started Processing
+Milancap - 8 - https://www.milancap.com/in-the-news Ended Successfully
+Milancap - 9 - crown-valley-contact-form Started Processing
+Milancap - 9 - https://www.milancap.com/crown-valley-contact-form Ended Successfully
+Milancap - 10 - laurel-cayon Started Processing
+Milancap - 10 - https://www.milancap.com/laurel-cayon Ended Successfully
+Milancap - 11 - history Started Processing

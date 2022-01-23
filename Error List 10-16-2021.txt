@@ -1,0 +1,4 @@
+The Ivy Group - https://www.ivycommercial.com/property/35457-dumbarton-ct-newark-ca/ -- TypeError: Cannot read properties of null (reading 'click')
+The Ivy Group - https://www.ivycommercial.com/property/1331-south-wolfe-rd-sunnyvale-ca-94087/ -- TypeError: Cannot read properties of null (reading 'click')
+The Ivy Group - https://www.ivycommercial.com/property/2021-the-alameda-suite-199-san-jose-ca/ -- TypeError: Cannot read properties of null (reading 'click')
+The Ivy Group - https://www.ivycommercial.com/property/2368-2370-alvarado-st-san-leandro-ca/ -- TypeError: Cannot read properties of null (reading 'click')

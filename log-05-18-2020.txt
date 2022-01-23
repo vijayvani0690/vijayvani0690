@@ -1,0 +1,5 @@
+ 05-18-2020 08:46:58
+Ignore before open Already Opened URL - Original URL - https://shopping.myus.com/stores/
+Ignore before open Already Opened URL - Original URL - https://shopping.myus.com/stores?newInstall=true
+Ignore before open Already Opened URL - Original URL - http://looplink.ngpearson.com/xNet/Looplink/TmplEngine/ListingProfilePage.aspx?stid=grubbpearson&amp;LID=&amp;LL=true&amp;UOMListing=&amp;UOMMoneyCurrency=&amp;RentPer=PM&amp;SRID=0&amp;IP=false
+Ignore before open Already Opened URL - Original URL - https://www.loopnet.com/

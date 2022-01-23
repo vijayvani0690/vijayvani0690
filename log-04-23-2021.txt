@@ -1,0 +1,9 @@
+﻿Ignore before open Already Opened URL - Original URL - https://shopping.myus.com/stores/
+Ignore before open Already Opened URL - Original URL - https://shopping.myus.com/stores?newInstall=true
+Ignore before open Already Opened URL - Original URL - https://realnex.com/listings/client/1/545824/545824?isInFrame=true&amp;showAgent=true&amp;linkAgent=false&amp;ca=true
+Ignore before open Already Opened URL - Original URL - https://www.googletagmanager.com/ns.html?id=GTM-TS7F4VH
+Ignore before open Already Opened URL - Original URL - https://www.gstatic.com/charts/loader.js
+Ignore before open Already Opened URL - Original URL - https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frealnex.com%2Flistings%2Fclient%2F1%2F545824%2F545824%3FisInFrame%3Dtrue%26showAgent%3Dtrue%26linkAgent%3Dfalse%26ca%3Dtrue
+Ignore before open Already Opened URL - Original URL - https://twitter.com/intent/tweet?text=FOR%20SALE%3A%20Adelanto%2C%20CA%20Medical%20Marijuana%20Cultivation&amp;url=https%3A%2F%2Frealnex.com%2Flistings%2Fclient%2F1%2F545824%2F545824%3FisInFrame%3Dtrue%26showAgent%3Dtrue%26linkAgent%3Dfalse%26ca%3Dtrue&amp;via=RealNex&amp;hashtags=RealNex
+Ignore before open Already Opened URL - Original URL - https://www.linkedin.com/shareArticle?url=https%3A%2F%2Frealnex.com%2Flistings%2Fclient%2F1%2F545824%2F545824%3FisInFrame%3Dtrue%26showAgent%3Dtrue%26linkAgent%3Dfalse%26ca%3Dtrue&amp;mini=true&amp;source=RealNex
+Ignore before open Already Opened URL - Original URL - https://realnex.com/s3/realnex.production/ListingAttachment/545824/1944501.jpg?autorotate=true

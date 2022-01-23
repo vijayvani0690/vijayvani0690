@@ -1,0 +1,15 @@
+Point2Homes - 1 - https://www.point2homes.com/cre/commercial-property/us/ny/new-york/115-west-30th-street-3/ Started Processing
+Point2Homes - 1 - https://www.point2homes.com/cre/commercial-property/us/ny/new-york/115-west-30th-street-3/ Started Processing
+Point2Homes - 1 - https://www.point2homes.com/cre/commercial-property/us/ny/new-york/115-west-30th-street-3/ Ended Successfully
+Point2Homes - 2 - https://www.point2homes.com/cre/commercial-property/us/ca/irvine/2042-business-center-drive/ Started Processing
+Point2Homes - 2 - https://www.point2homes.com/cre/commercial-property/us/ca/irvine/2042-business-center-drive/ Ended Successfully
+Point2Homes - 3 - https://www.point2homes.com/cre/commercial-property/us/ca/los-angeles/3015-south-crenshaw-boulevard/ Started Processing
+Point2Homes - 3 - https://www.point2homes.com/cre/commercial-property/us/ca/los-angeles/3015-south-crenshaw-boulevard/ Ended Successfully
+Point2Homes - 4 - https://www.point2homes.com/cre/commercial-property/us/ny/new-york/325-west-38th-street-6/ Started Processing
+Point2Homes - 1 - https://www.point2homes.com/cre/commercial-property/us/ca/los-angeles/3015-south-crenshaw-boulevard/ Started Processing
+Point2Homes - 1 - https://www.point2homes.com/cre/commercial-property/us/ca/los-angeles/3015-south-crenshaw-boulevard/ Ended Successfully
+Point2Homes - 2 - https://www.point2homes.com/cre/commercial-property/us/ny/new-york/325-west-38th-street-6/ Started Processing
+Point2Homes - 2 - https://www.point2homes.com/cre/commercial-property/us/ny/new-york/325-west-38th-street-6/ Ended Successfully
+Point2Homes - 3 - https://www.point2homes.com/cre/commercial-property/us/ny/new-york/325-west-38th-street-3/ Started Processing
+Point2Homes - 3 - https://www.point2homes.com/cre/commercial-property/us/ny/new-york/325-west-38th-street-3/ Ended Successfully
+Point2Homes - 4 - https://www.point2homes.com/cre/commercial-property/us/nj/hoboken/jda-hoboken-business-center-llc-2/ Started Processing

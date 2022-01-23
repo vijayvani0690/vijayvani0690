@@ -1,0 +1,37 @@
+Z - Beyond The Creek - Restaurants - 1 - https://www.beyondthecreek.com/headlands-brewing-company-opens-at-lafayette-forge/ Started Processing
+Z - Beyond The Creek - Restaurants - 1 - https://www.beyondthecreek.com/headlands-brewing-company-opens-at-lafayette-forge/ Ended Successfully
+Z - Beyond The Creek - Restaurants - 2 - https://www.beyondthecreek.com/kiku-sushi-opens-in-lafayette/ Started Processing
+Z - Beyond The Creek - Restaurants - 2 - https://www.beyondthecreek.com/kiku-sushi-opens-in-lafayette/ Ended Successfully
+Z - Beyond The Creek - Restaurants - 3 - https://www.beyondthecreek.com/starbird-chicken-opens-at-encina-grande-in-walnut-creek/ Started Processing
+Z - Beyond The Creek - Retail - 1 - https://www.beyondthecreek.com/americas-finest-hemp-co-opening-june-26th-in-danville/ Started Processing
+Z - Beyond The Creek - Retail - 1 - https://www.beyondthecreek.com/americas-finest-hemp-co-opening-june-26th-in-danville/ Ended Successfully
+Z - Beyond The Creek - Retail - 2 - https://www.beyondthecreek.com/hollies-homegrown-coming-soon-to-park-plaza-shops-in-lafayette/ Started Processing
+Z - Beyond The Creek - Retail - 2 - https://www.beyondthecreek.com/hollies-homegrown-coming-soon-to-park-plaza-shops-in-lafayette/ Ended Successfully
+Z - Beyond The Creek - Retail - 3 - https://www.beyondthecreek.com/diablo-grills-opens-in-downtown-walnut-creek/ Started Processing
+Z - Beyond The Creek - Retail - 3 - https://www.beyondthecreek.com/diablo-grills-opens-in-downtown-walnut-creek/ Ended Successfully
+Z - Beyond The Creek - Retail - 4 - https://www.beyondthecreek.com/massage-chairs-more-opens-at-broadway-plaza-in-walnut-creek/ Started Processing
+Z - Beyond The Creek - Retail - 1 - https://www.beyondthecreek.com/americas-finest-hemp-co-opening-june-26th-in-danville/ Started Processing
+Z - Beyond The Creek - Retail - 1 - https://www.beyondthecreek.com/americas-finest-hemp-co-opening-june-26th-in-danville/ Ended Successfully
+Z - Beyond The Creek - Retail - 2 - https://www.beyondthecreek.com/hollies-homegrown-coming-soon-to-park-plaza-shops-in-lafayette/ Started Processing
+Z - Beyond The Creek - Retail - 2 - https://www.beyondthecreek.com/hollies-homegrown-coming-soon-to-park-plaza-shops-in-lafayette/ Ended Successfully
+Z - Beyond The Creek - Retail - 3 - https://www.beyondthecreek.com/diablo-grills-opens-in-downtown-walnut-creek/ Started Processing
+Z - Beyond The Creek - Retail - 3 - https://www.beyondthecreek.com/diablo-grills-opens-in-downtown-walnut-creek/ Ended Successfully
+Z - Beyond The Creek - Retail - 4 - https://www.beyondthecreek.com/massage-chairs-more-opens-at-broadway-plaza-in-walnut-creek/ Started Processing
+Z - Beyond The Creek - Retail - 4 - https://www.beyondthecreek.com/massage-chairs-more-opens-at-broadway-plaza-in-walnut-creek/ Ended Successfully
+Z - Beyond The Creek - Retail - 5 - https://www.beyondthecreek.com/california-closets-reopening-in-new-downtown-walnut-creek-location/ Started Processing
+Commercial Exchange - 1 - https://www.commercialexchange.com/property/60c78d23b0224000060975e7 Started Processing
+Commercial Exchange - 1 - https://www.commercialexchange.com/property/60c78d23b0224000060975e7 Ended Successfully
+Commercial Exchange - 2 - https://www.commercialexchange.com/property/543585 Started Processing
+Commercial Exchange - 2 - https://www.commercialexchange.com/property/543585 Ended Successfully
+Commercial Exchange - 3 - https://www.commercialexchange.com/property/499773 Started Processing
+Commercial Exchange - 3 - https://www.commercialexchange.com/property/499773 Ended Successfully
+Commercial Exchange - 4 - https://www.commercialexchange.com/property/853138 Started Processing
+Commercial Exchange - 4 - https://www.commercialexchange.com/property/853138 Ended Successfully
+Commercial Exchange - 5 - https://www.commercialexchange.com/property/503257 Started Processing
+Commercial Exchange - 5 - https://www.commercialexchange.com/property/503257 Ended Successfully
+Commercial Exchange - 6 - https://www.commercialexchange.com/property/5da0ecb6e469e00001a404e6 Started Processing
+Anderson Commercial - 1 - https://andersoncommercialre.com/1011-pacific-slo/ Started Processing
+Anderson Commercial - 1 - https://andersoncommercialre.com/1011-pacific-slo/ Ended Successfully
+Anderson Commercial - 2 - https://andersoncommercialre.com/846-ricardo-slo/ Started Processing
+Anderson Commercial - 2 - https://andersoncommercialre.com/846-ricardo-slo/ Ended Successfully
+Anderson Commercial - 3 - https://andersoncommercialre.com/1101-monterey-330-slo/ Started Processing

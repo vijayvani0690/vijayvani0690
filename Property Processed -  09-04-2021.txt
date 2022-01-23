@@ -1,0 +1,30 @@
+Argent - 1 - 23792914 Started Processing
+Argent - 1 - http://looplink.argentcre.com/xNet/Looplink/TmplEngine/ListingProfilePage.aspx?stid=argentretail&LID=23792914&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+Argent - 2 - 23622369 Started Processing
+Brixmor - 1 - https://properties.brixmor.com/p/retail-real-estate/Sterling+Heights-MI-48310/18ryan Started Processing
+Brixmor - 1 - https://properties.brixmor.com/p/retail-real-estate/Sterling+Heights-MI-48310/18ryan Started Processing
+Brixmor - 1 - https://properties.brixmor.com/p/retail-real-estate/Sterling+Heights-MI-48310/18ryan Ended Successfully
+Brixmor - 2 - https://properties.brixmor.com/p/retail-real-estate/Panama+City-FL-32405/23rdstreetstation Started Processing
+Brixmor - 2 - https://properties.brixmor.com/p/retail-real-estate/Panama+City-FL-32405/23rdstreetstation Ended Successfully
+Brixmor - 3 - https://properties.brixmor.com/p/retail-real-estate/Upper+Darby-PA-19082/69thstreetplaza Started Processing
+Desert Pacific Properties - 1 - https://www.desertpacificproperties.com/commercial-buildings-for-sale/74175-el-paseo-palm-desert/ Started Processing
+Desert Pacific Properties - 1 - https://www.desertpacificproperties.com/commercial-buildings-for-sale/74175-el-paseo-palm-desert/ Ended Successfully
+Desert Pacific Properties - 2 - https://www.desertpacificproperties.com/commercial-land-for-sale/18-ac-jefferson-plaza-indio/ Started Processing
+Desert Pacific Properties - 2 - https://www.desertpacificproperties.com/commercial-land-for-sale/18-ac-jefferson-plaza-indio/ Ended Successfully
+Desert Pacific Properties - 3 - https://www.desertpacificproperties.com/commercial-land-for-sale/3-78-ac-jefferson-plaza-indio/ Started Processing
+Desert Pacific Properties - 3 - https://www.desertpacificproperties.com/commercial-land-for-sale/3-78-ac-jefferson-plaza-indio/ Ended Successfully
+Desert Pacific Properties - 4 - https://www.desertpacificproperties.com/commercial-buildings-for-sale/1000-e-tahquitz-canyon-palm-springs/ Started Processing
+Desert Pacific Properties - 4 - https://www.desertpacificproperties.com/commercial-buildings-for-sale/1000-e-tahquitz-canyon-palm-springs/ Ended Successfully
+Desert Pacific Properties - 5 - https://www.desertpacificproperties.com/industrial-land-for-sale/246-4-ac-palm-drive-i-10-palm-springs/ Started Processing
+Desert Pacific Properties - 5 - https://www.desertpacificproperties.com/industrial-land-for-sale/246-4-ac-palm-drive-i-10-palm-springs/ Ended Successfully
+Desert Pacific Properties - 6 - https://www.desertpacificproperties.com/commercial-land-for-sale/15-81-ac-requa-ave-rubidoux-st-indio/ Started Processing
+Elizabeth Clark - 1 - https://www.elizabethclark.com/elizabeth-clark-current-listings/9alxxd7cp7r56k5xnxbmj9pc5576g7-54bhd-ssr4p-lyn22-wngpz-x354z-hdyyh Started Processing
+Elizabeth Clark - 1 - https://www.elizabethclark.com/elizabeth-clark-current-listings/9alxxd7cp7r56k5xnxbmj9pc5576g7-54bhd-ssr4p-lyn22-wngpz-x354z-hdyyh Ended Successfully
+Elizabeth Clark - 2 - https://www.elizabethclark.com/elizabeth-clark-current-listings/9alxxd7cp7r56k5xnxbmj9pc5576g7-3etkl-xxtsg-pse43-x55yw-b9zb4-ges73 Started Processing
+Elizabeth Clark - 2 - https://www.elizabethclark.com/elizabeth-clark-current-listings/9alxxd7cp7r56k5xnxbmj9pc5576g7-3etkl-xxtsg-pse43-x55yw-b9zb4-ges73 Ended Successfully
+Elizabeth Clark - 3 - https://www.elizabethclark.com/elizabeth-clark-current-listings/9alxxd7cp7r56k5xnxbmj9pc5576g7-3etkl-xxtsg-pse43-x55yw-b9zb4 Started Processing
+Elizabeth Clark - 1 - https://www.elizabethclark.com/elizabeth-clark-current-listings/9alxxd7cp7r56k5xnxbmj9pc5576g7-54bhd-ssr4p-lyn22-wngpz-x354z-hdyyh Started Processing
+Elizabeth Clark - 1 - https://www.elizabethclark.com/elizabeth-clark-current-listings/9alxxd7cp7r56k5xnxbmj9pc5576g7-54bhd-ssr4p-lyn22-wngpz-x354z-hdyyh Ended Successfully
+Elizabeth Clark - 2 - https://www.elizabethclark.com/elizabeth-clark-current-listings/9alxxd7cp7r56k5xnxbmj9pc5576g7-3etkl-xxtsg-pse43-x55yw-b9zb4-ges73 Started Processing
+Elizabeth Clark - 2 - https://www.elizabethclark.com/elizabeth-clark-current-listings/9alxxd7cp7r56k5xnxbmj9pc5576g7-3etkl-xxtsg-pse43-x55yw-b9zb4-ges73 Ended Successfully
+Elizabeth Clark - 3 - https://www.elizabethclark.com/elizabeth-clark-current-listings/9alxxd7cp7r56k5xnxbmj9pc5576g7-3etkl-xxtsg-pse43-x55yw-b9zb4 Started Processing

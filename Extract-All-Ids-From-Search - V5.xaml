@@ -1,0 +1,864 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Extract_All_Ids_From_Search" this:Extract_All_Ids_From_Search.url="http://looplink.argentcre.com/SearchResults" this:Extract_All_Ids_From_Search.pagesAvailable="N" this:Extract_All_Ids_From_Search.isAutomation="False" this:Extract_All_Ids_From_Search.hasStop="N" this:Extract_All_Ids_From_Search.isCrexiSale="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="idList" Type="OutArgument(s:String[])" />
+    <x:Property Name="url" Type="InArgument(x:String)" />
+    <x:Property Name="idListJs" Type="InArgument(x:String)" />
+    <x:Property Name="pagesAvailable" Type="InArgument(x:String)" />
+    <x:Property Name="nextButtonPath" Type="InArgument(x:String)" />
+    <x:Property Name="nextButtonPath2" Type="InArgument(x:String)" />
+    <x:Property Name="nextPageCode" Type="InArgument(x:String)" />
+    <x:Property Name="isAutomation" Type="InArgument(x:Boolean)" />
+    <x:Property Name="autmationData" Type="InArgument(x:String)" />
+    <x:Property Name="websiteName" Type="InArgument(x:String)" />
+    <x:Property Name="hasStop" Type="InArgument(x:String)" />
+    <x:Property Name="instructions" Type="InArgument(x:String)" />
+    <x:Property Name="isCrexiSale" Type="InArgument(x:Boolean)" />
+    <x:Property Name="crexiSaleMetaDataRow" Type="InArgument(sd:DataRow)" />
+  </x:Members>
+  <this:Extract_All_Ids_From_Search.nextPageCode>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:Extract_All_Ids_From_Search.nextPageCode>
+  <this:Extract_All_Ids_From_Search.websiteName>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:Extract_All_Ids_From_Search.websiteName>
+  <this:Extract_All_Ids_From_Search.instructions>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:Extract_All_Ids_From_Search.instructions>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>2510,9618</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Extract_All_Ids_From_Search_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Extract-All-Ids-From-Search" sap:VirtualizedContainerService.HintSize="2520,9553" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="ids" />
+      <Variable x:TypeArguments="x:String" Name="fullIdList" />
+      <Variable x:TypeArguments="x:Boolean" Name="nextAvailable" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="noOfPages" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="pagesCompleted" />
+      <Variable x:TypeArguments="ui:Image" Name="nextButton" />
+      <Variable x:TypeArguments="ui:Image" Name="nextButton2" />
+      <Variable x:TypeArguments="x:String" Name="startLine" />
+      <Variable x:TypeArguments="x:String" Name="maxRecords" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open browser" Hidden="False" sap:VirtualizedContainerService.HintSize="2478,9461" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[url]">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2444,9362" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Default="-1" Name="maxResult" />
+              <Variable x:TypeArguments="x:String" Name="stopLine" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="2402,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <If Condition="[Not instructions.Equals(&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="2402,249" sap2010:WorkflowViewState.IdRef="If_26">
+              <If.Then>
+                <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="Instruction for the website" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[instructions]" TopMost="True" />
+              </If.Then>
+            </If>
+            <If Condition="[Not isAutomation]" sap:VirtualizedContainerService.HintSize="2402,1662" sap2010:WorkflowViewState.IdRef="If_16">
+              <If.Then>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please input the search criteria and click ok.&quot;]" TopMost="True" />
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="1123,1503" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[Not isCrexiSale]" sap:VirtualizedContainerService.HintSize="1081,1411" sap2010:WorkflowViewState.IdRef="If_27">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="660,1252" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence sap:VirtualizedContainerService.HintSize="618,1160" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="sd:DataTable" Name="pivotData" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ReadRange AddHeaders="True" DataTable="[pivotData]" DisplayName="Read range" sap:VirtualizedContainerService.HintSize="576,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="Pivot" WorkbookPath="AllURLs.xlsx" />
+                          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[pivotData]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576,941" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                            <ui:ForEachRow.Body>
+                              <ActivityAction x:TypeArguments="sd:DataRow">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,793" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:String" Name="searchScriptJS" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[row.Item(0).Equals(Split(autmationData,&quot;##&quot;)(0).ToString)]" sap:VirtualizedContainerService.HintSize="484,701" sap2010:WorkflowViewState.IdRef="If_18">
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,512" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="x:String" Name="searchOption" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_23">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[searchOption]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[Split(autmationData,"##")(2).ToString]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[searchScriptJS]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[row.Item(searchOption).ToString]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                                        <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_12" ScriptCode="[searchScriptJS]">
+                                          <ui:InjectJsScript.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                          </ui:InjectJsScript.Target>
+                                        </ui:InjectJsScript>
+                                        <Delay Duration="00:00:20" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                                      </Sequence>
+                                    </If.Then>
+                                  </If>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ForEachRow.Body>
+                          </ui:ForEachRow>
+                        </Sequence>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Crexi Sale Search flow workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Crexi Sale Search flow.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="searchString">[crexiSaleMetaDataRow.Item(4).ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="propertyTypes">[crexiSaleMetaDataRow.Item(3).ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="fromDate">[crexiSaleMetaDataRow.Item(5).ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="toDate">[crexiSaleMetaDataRow.Item(6).ToString]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[websiteName.Equals(&quot;Lee &amp; Associates - All&quot;)]" sap:VirtualizedContainerService.HintSize="2402,285" sap2010:WorkflowViewState.IdRef="If_23">
+              <If.Then>
+                <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_13" ScriptCode="function(e){&#xA;try{&#xA;document.querySelector('.js-next').scrollIntoView();&#xA;}catch(excp){}&#xA;return 0;&#xA;}">
+                  <ui:InjectJsScript.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                  </ui:InjectJsScript.Target>
+                </ui:InjectJsScript>
+              </If.Then>
+            </If>
+            <If Condition="[pagesAvailable.Equals(&quot;Y&quot;)]" sap:VirtualizedContainerService.HintSize="2402,1073" sap2010:WorkflowViewState.IdRef="If_9">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="1158,884" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LoadImage DisplayName="Load image" FileName="[nextButtonPath]" sap:VirtualizedContainerService.HintSize="1116,59" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[nextButton]" />
+                  <ui:LoadImage DisplayName="Load image" FileName="[nextButtonPath2]" sap:VirtualizedContainerService.HintSize="1116,59" sap2010:WorkflowViewState.IdRef="LoadImage_2" Image="[nextButton2]" />
+                  <If Condition="[Not isAutomation or isCrexiSale]" sap:VirtualizedContainerService.HintSize="1116,594" sap2010:WorkflowViewState.IdRef="If_17">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="767,435" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If Condition="[Not isCrexiSale]" sap:VirtualizedContainerService.HintSize="725,343" sap2010:WorkflowViewState.IdRef="If_30">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,184" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InputDialog Options="{x:Null}" DisplayName="Input dialog" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter the no.of pages" Title="No of Pages">
+                                <ui:InputDialog.Result>
+                                  <OutArgument x:TypeArguments="x:Int32">[noOfPages]</OutArgument>
+                                </ui:InputDialog.Result>
+                              </ui:InputDialog>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[noOfPages]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[noOfPages]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(Split(autmationData,"##")(1).ToString)]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[Not isAutomation or isCrexiSale]" sap:VirtualizedContainerService.HintSize="2402,662" sap2010:WorkflowViewState.IdRef="If_19">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="767,503" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[Not isCrexiSale]" sap:VirtualizedContainerService.HintSize="725,411" sap2010:WorkflowViewState.IdRef="If_31">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,184" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter start line" Title="Enter start line">
+                          <ui:InputDialog.Result>
+                            <OutArgument x:TypeArguments="x:String">[startLine]</OutArgument>
+                          </ui:InputDialog.Result>
+                        </ui:InputDialog>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_31">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[startLine]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">0</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_32">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[maxResult]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[Integer.Parse(crexiSaleMetaDataRow.Item(7).ToString)]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="346,344" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_25">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[startLine]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Split(autmationData,"##")(3).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_28">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[maxResult]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Integer.Parse(Split(autmationData,"##")(4).ToString)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[hasStop.Equals(&quot;Y&quot;)]" sap:VirtualizedContainerService.HintSize="2402,281" sap2010:WorkflowViewState.IdRef="If_24">
+              <If.Then>
+                <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Enter Stop line" Title="Enter Stop line">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:String">[stopLine]</OutArgument>
+                  </ui:InputDialog.Result>
+                </ui:InputDialog>
+              </If.Then>
+            </If>
+            <If Condition="[Not url.IndexOf(&quot;crexi.com&quot;).Equals(-1) and Not isCrexiSale]" sap:VirtualizedContainerService.HintSize="2402,473" sap2010:WorkflowViewState.IdRef="If_20">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,284" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter Max records" Title="Max Records">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[maxRecords]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_26">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[maxResult]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[Integer.Parse(maxRecords)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+            </If>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2402,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <If Condition="[hasStop.Equals(&quot;Y&quot;)]" sap:VirtualizedContainerService.HintSize="2402,347" sap2010:WorkflowViewState.IdRef="If_25">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,188" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InjectJsScript DisplayName="Inject js script" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_14" InputParameter="[startLine + &quot;####&quot; + stopLine.ToString]" ScriptCode="[idListJs]">
+                    <ui:InjectJsScript.ScriptOutput>
+                      <OutArgument x:TypeArguments="x:String">[ids]</OutArgument>
+                    </ui:InjectJsScript.ScriptOutput>
+                    <ui:InjectJsScript.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="COMPLETE" />
+                    </ui:InjectJsScript.Target>
+                  </ui:InjectJsScript>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,188" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InjectJsScript DisplayName="Inject js script" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" InputParameter="[startLine]" ScriptCode="[idListJs]">
+                    <ui:InjectJsScript.ScriptOutput>
+                      <OutArgument x:TypeArguments="x:String">[ids]</OutArgument>
+                    </ui:InjectJsScript.ScriptOutput>
+                    <ui:InjectJsScript.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="COMPLETE" />
+                    </ui:InjectJsScript.Target>
+                  </ui:InjectJsScript>
+                </Sequence>
+              </If.Else>
+            </If>
+            <Assign sap:VirtualizedContainerService.HintSize="2402,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[fullIdList]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[ids]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="2402,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[pagesCompleted]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">1</InArgument>
+              </Assign.Value>
+            </Assign>
+            <DoWhile DisplayName="Do while" sap:VirtualizedContainerService.HintSize="2402,2635" sap2010:WorkflowViewState.IdRef="DoWhile_1" Condition="[nextAvailable And Not noOfPages.Equals(pagesCompleted)]">
+              <Sequence sap:VirtualizedContainerService.HintSize="2356,2472" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If Condition="[Not noOfPages.Equals(pagesCompleted)]" sap:VirtualizedContainerService.HintSize="2314,2280" sap2010:WorkflowViewState.IdRef="If_8">
+                  <If.Then>
+                    <Sequence DisplayName="Sequence O next Page" sap:VirtualizedContainerService.HintSize="2007,2121" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:Boolean" Name="nextAvailable2" />
+                        <Variable x:TypeArguments="x:Boolean" Default="False" Name="nextAvailable3" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="1965,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[nextAvailable]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <If Condition="[nextPageCode.Equals(&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="1965,616" sap2010:WorkflowViewState.IdRef="If_14">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="526,457" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ImageFound DisplayName="Image Exists" Found="[nextAvailable]" sap:VirtualizedContainerService.HintSize="484,68" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                              <ui:ImageFound.Image>
+                                <ui:ImageTarget Accuracy="0.8" Image="[nextButton]" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAABbSURBVEhLY/hPBzBqCUlg1BKSwKglJIGRaMnFK/+duq/8PwflkgJI8snzvWf/O616BOURD0gMrjf/N8w69T9n7xsonzgw+CyhfXDRK+LJBaOWkARGLSEB/P8PACOIr7rsBH94AAAAAElFTkSuQmCC" />
+                              </ui:ImageFound.Image>
+                              <ui:ImageFound.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                              </ui:ImageFound.Target>
+                            </ui:ImageFound>
+                            <If Condition="[Not nextAvailable]" sap:VirtualizedContainerService.HintSize="484,257" sap2010:WorkflowViewState.IdRef="If_10">
+                              <If.Then>
+                                <ui:ImageFound DisplayName="Image Exists" Found="[nextAvailable2]" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+                                  <ui:ImageFound.Image>
+                                    <ui:ImageTarget TargetImageBase64="{x:Null}" Accuracy="0.8" Image="[nextButton2]" />
+                                  </ui:ImageFound.Image>
+                                  <ui:ImageFound.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                                  </ui:ImageFound.Target>
+                                </ui:ImageFound>
+                              </If.Then>
+                            </If>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[nextAvailable3]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[nextAvailable]" sap:VirtualizedContainerService.HintSize="1965,1273" sap2010:WorkflowViewState.IdRef="If_7">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="611,617" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click image" sap:VirtualizedContainerService.HintSize="569,68" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                              <ui:ClickImage.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:ClickImage.CursorPosition>
+                              <ui:ClickImage.Image>
+                                <ui:ImageTarget Accuracy="0.8" Image="[nextButton]" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAABbSURBVEhLY/hPBzBqCUlg1BKSwKglJIGRaMnFK/+duq/8PwflkgJI8snzvWf/O616BOURD0gMrjf/N8w69T9n7xsonzgw+CyhfXDRK+LJBaOWkARGLSEB/P8PACOIr7rsBH94AAAAAElFTkSuQmCC" />
+                              </ui:ClickImage.Image>
+                              <ui:ClickImage.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                              </ui:ClickImage.Target>
+                            </ui:ClickImage>
+                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="569,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                            <ui:InjectJsScript DisplayName="Inject js script" sap:VirtualizedContainerService.HintSize="569,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_6" InputParameter="0" ScriptCode="[idListJs]">
+                              <ui:InjectJsScript.ScriptOutput>
+                                <OutArgument x:TypeArguments="x:String">[ids]</OutArgument>
+                              </ui:InjectJsScript.ScriptOutput>
+                              <ui:InjectJsScript.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="COMPLETE" />
+                              </ui:InjectJsScript.Target>
+                            </ui:InjectJsScript>
+                            <If Condition="[url.Contains(&quot;insidescoopsf&quot;) Or url.Contains(&quot;mercurynews.com&quot;) Or url.Contains(&quot;kidder.com&quot;)]" sap:VirtualizedContainerService.HintSize="569,219" sap2010:WorkflowViewState.IdRef="If_12">
+                              <If.Then>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[fullIdList]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[ids]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </If.Then>
+                              <If.Else>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[fullIdList]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[fullIdList + "####" + ids]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <If Condition="[nextAvailable2]" sap:VirtualizedContainerService.HintSize="1309,1114" sap2010:WorkflowViewState.IdRef="If_11">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="611,717" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click image" sap:VirtualizedContainerService.HintSize="569,68" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                  <ui:ClickImage.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:ClickImage.CursorPosition>
+                                  <ui:ClickImage.Image>
+                                    <ui:ImageTarget Accuracy="0.8" Image="[nextButton2]" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAABbSURBVEhLY/hPBzBqCUlg1BKSwKglJIGRaMnFK/+duq/8PwflkgJI8snzvWf/O616BOURD0gMrjf/N8w69T9n7xsonzgw+CyhfXDRK+LJBaOWkARGLSEB/P8PACOIr7rsBH94AAAAAElFTkSuQmCC" />
+                                  </ui:ClickImage.Image>
+                                  <ui:ClickImage.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                  </ui:ClickImage.Target>
+                                </ui:ClickImage>
+                                <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="569,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                                <ui:InjectJsScript DisplayName="Inject js script" sap:VirtualizedContainerService.HintSize="569,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_8" InputParameter="0" ScriptCode="[idListJs]">
+                                  <ui:InjectJsScript.ScriptOutput>
+                                    <OutArgument x:TypeArguments="x:String">[ids]</OutArgument>
+                                  </ui:InjectJsScript.ScriptOutput>
+                                  <ui:InjectJsScript.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="COMPLETE" />
+                                  </ui:InjectJsScript.Target>
+                                </ui:InjectJsScript>
+                                <If Condition="[url.Contains(&quot;insidescoopsf&quot;) Or url.Contains(&quot;mercurynews.com&quot;) Or url.Contains(&quot;kidder.com&quot;)]" sap:VirtualizedContainerService.HintSize="569,219" sap2010:WorkflowViewState.IdRef="If_13">
+                                  <If.Then>
+                                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[fullIdList]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[ids]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[fullIdList]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[fullIdList + "####" + ids]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </If.Else>
+                                </If>
+                                <Assign sap:VirtualizedContainerService.HintSize="569,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[nextAvailable]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">[nextAvailable2]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="653,955" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence sap:VirtualizedContainerService.HintSize="611,863" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="569,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_11" ScriptCode="[nextPageCode]">
+                                    <ui:InjectJsScript.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                    </ui:InjectJsScript.Target>
+                                  </ui:InjectJsScript>
+                                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[websiteName]" sap:VirtualizedContainerService.HintSize="569,140" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                                    <Switch.Default>
+                                      <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                                    </Switch.Default>
+                                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" x:Key="Bidclerk" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                      <ui:ClickImage.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:ClickImage.CursorPosition>
+                                      <ui:ClickImage.Image>
+                                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIMAAAAsCAYAAABG1wtdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAU/SURBVHhe7ZzhSxtJFMD79/klX7YHRi4cJh8CGqkEQcQiUqmBGjCHBK6VEjmFGpB6QmklNMihSEACGsQgBlvx6n25/gF+effezLxkdrMbE1211ffgR3V2dneS+c2bt1vwycW3f0B4nPx78Q0uLy+BQ2R45Hz//p9RQWR49FB24BAZBKOCyCAgHCKDYFQQGQSEQ2QQjAoig4BwiAyCUUFkEBCO8GXYLUD6baW9bWELzuy2vVVIZz5Cw24T7gWO8GX4nIO+7FZ727NVqF3VJtwLHCKDYFQIU4bjKpQ/lWBzcQL6xguwiT+Xqyf6WJgynH+BxvFJIGfn1O8Eyks5mJvPwfqeOW9vQ/0+t7T1425NtQOoq/FbnNqfS1PfP3D3uSEcoclQzj6FyEASYgnDYAwiTg7KdDxMGei8yNNA5j5TvwNYeWb/bp1n3bO+9kKNdXLtqHX9e6KKY+nH8cUXq3DxtQrrv09BfCDq+VxIbRVSDn7X48tQabivcV04QpUhiYVjc5Vi0ZiM+Mtw1sDjf2Wgb6gAFer71X2tjvCkOrGWeBb5v3U/dQ97RfnIUFsZU22plXBXWq/QOCLqM43Bm13KpgdQGNISME0ZUJTiVFy1RQbx+w1BCI7QZKgsJvUHsogMLUOVjlsy1N/pCXDBGaQbfCa1nSMoTrvl8J6nsoJZeZzR7AzR2F2F6ZEkOE4U+kemIP/JFmYH8kq+F1DE1L4+MwzOvKmTDkuQfz6K145Bf2ICpt+WoOZN/TY7eZURSISV/VZ7vVZFkX0yHEHtaT12B+sz11PaNeC48wKSVoF7JW7BHGeQbuhKhqu3Cc4KNjyuWnHCrFSdfRxMy32RKKTe8bhpzNSWhFRar1L9mSuQ/0337SdZlGxxyO3wuLx8gQ8v9aSq7aHteIAMRH0N0moMU7B+7DnWIxx3LgNlBldtkYjjF38NGfxo3re7msF3mzj9CNNq8segwCt1fxlSdC5lMLXKWQYiDpNLG7pYpv2c2hKvoWKyQb160KFgxeuoe4227uWigwxYJK9P6GOzJe+x3uC4cxmaTwN2zXBq9b2K25YB07ZD/RJZKNLTkWINZhN0vZhZ5S0ZXOee70BOZQbklzikX61CuWaO+cLXycKm71bSSQZdp7WN4Rpw3L0Mndq6wWdS27mBDNyvY4HKk+izoo8rUHw1ZrYWIo5jMI/YbfB1MvDBd0E8JBkOK3pl0bsHXmm7pkj7gWSI2fv18QaMUz8HJ8iu1OtHVrrnScSiz7PyG3Uz8ZgBa+8zOsu8/BhQ5FXhDWccLnRddJKBz43C3Jb3WG9w3KoM5fkoOOmsftlDZHDFBDxudk2IMjSfbEwWyJkvdXuBH92mYJbGPUMrPQoxfGLQQgTIsFeAOJ03ktGfd3pUFaLOwk6rj4fq0rC+14zf/9MEy9AoZbVoA3nY7vS00gUctytDD+8euiZEGS4aOKmD/GIn2lqd5ydQ/sNO9TTBedg8NMeDZGh4twhaDK9hu9O7ABqDeQJJ/el9ogiQYX8DJs054+9v/sKM41ZlqGORqPbaX/EL5z34+ZqejOvKcAvQCyr7dW8TLnZ7KXANgdf0Y1+/VaTJjWEW6fTe4IwWlOmbxL5hvFrn+PkKyIfKYQlyI8OYAYKKTcM51gojo5BzvQS7GRwig2BUEBkEhCN8GWif9e6x3bYJ9wJH+DIIPx0cIoNgVBAZBIRDZBCMCiKDgHCIDIJRQWQQEA6R4ZEjf8ZHaCJ/4EtQtP3pPzKDGv06Cw8Tmm+ad1sEiifmXwkJkUGiFSKDhAmA/wE7wzktxlyU5AAAAABJRU5ErkJggg==" />
+                                      </ui:ClickImage.Image>
+                                      <ui:ClickImage.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                      </ui:ClickImage.Target>
+                                    </ui:ClickImage>
+                                  </Switch>
+                                  <ui:InjectJsScript DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="569,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_10" InputParameter="0" ScriptCode="[idListJs]">
+                                    <ui:InjectJsScript.ScriptOutput>
+                                      <OutArgument x:TypeArguments="x:String">[ids]</OutArgument>
+                                    </ui:InjectJsScript.ScriptOutput>
+                                    <ui:InjectJsScript.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                    </ui:InjectJsScript.Target>
+                                  </ui:InjectJsScript>
+                                  <If Condition="[url.Contains(&quot;insidescoopsf&quot;) Or url.Contains(&quot;mercurynews.com&quot;) Or url.Contains(&quot;kidder.com&quot;)]" sap:VirtualizedContainerService.HintSize="569,219" sap2010:WorkflowViewState.IdRef="If_15">
+                                    <If.Then>
+                                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[fullIdList]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[ids]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[fullIdList]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[fullIdList + "####" + ids]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </If.Else>
+                                  </If>
+                                  <Assign sap:VirtualizedContainerService.HintSize="569,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Boolean">[nextAvailable]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Boolean">[nextAvailable3]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[nextAvailable]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </If.Else>
+                </If>
+                <Assign sap:VirtualizedContainerService.HintSize="2314,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[pagesCompleted]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[pagesCompleted + 1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </DoWhile>
+            <Assign sap:VirtualizedContainerService.HintSize="2402,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[idList]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[Split(fullIdList,"####")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[Not maxResult.Equals(-1)]" sap:VirtualizedContainerService.HintSize="2402,530" sap2010:WorkflowViewState.IdRef="If_21">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="526,341" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[idList.Length &gt; maxResult]" sap:VirtualizedContainerService.HintSize="484,249" sap2010:WorkflowViewState.IdRef="If_22">
+                    <If.Then>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_27">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="s:String[]">[idList]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="s:String[]">[idList.ToList().GetRange(0,maxResult).ToArray]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <Assign sap:VirtualizedContainerService.HintSize="2402,60" sap2010:WorkflowViewState.IdRef="Assign_29">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[idList]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[idList.Distinct().ToArray]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Write Log to File workflow" sap:VirtualizedContainerService.HintSize="2402,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Write Log to File.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="website">[url]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="log">[fullIdList + "Length - " + idList.Length.ToString]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="2402,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>

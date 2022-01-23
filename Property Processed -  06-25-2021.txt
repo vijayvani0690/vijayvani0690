@@ -1,0 +1,44 @@
+C.R.E.S. � Commercial Real Estate Services - 1 - 244854-lease Started Processing
+C.R.E.S. – Commercial Real Estate Services - 1 - https://buildout.com/plugins/3a31ea2b4ce71ff4a110043a993cf3702e9657ea/texascres.com/inventory/244854-lease?pluginId=0&iframe=true&embedded=true&cacheSearch=true&propertyId=244854-lease Ended Successfully
+C.R.E.S. – Commercial Real Estate Services - 2 - 244861-sale Started Processing
+C.R.E.S. – Commercial Real Estate Services - 2 - https://buildout.com/plugins/3a31ea2b4ce71ff4a110043a993cf3702e9657ea/texascres.com/inventory/244861-sale?pluginId=0&iframe=true&embedded=true&cacheSearch=true&propertyId=244854-lease Ended Successfully
+C.R.E.S. – Commercial Real Estate Services - 3 - 244930-sale Started Processing
+C.R.E.S. – Commercial Real Estate Services - 3 - https://buildout.com/plugins/3a31ea2b4ce71ff4a110043a993cf3702e9657ea/texascres.com/inventory/244930-sale?pluginId=0&iframe=true&embedded=true&cacheSearch=true&propertyId=244854-lease Ended Successfully
+C.R.E.S. – Commercial Real Estate Services - 4 - 876894-sale Started Processing
+Edge - 1 - https://edge-re.com/property/10-main-pad-sites/ Started Processing
+Edge - 1 - https://edge-re.com/property/10-main-pad-sites/ Ended Successfully
+Edge - 2 - https://edge-re.com/property/7206-2/ Started Processing
+Edge - 2 - https://edge-re.com/property/7206-2/ Ended Successfully
+Edge - 3 - https://edge-re.com/property/107-109-airport-freeway/ Started Processing
+Ellwood Commercial - 1 - https://ellwoodcommercial.com/property/1007-w-grand-avenue-oakland-ca/2 Started Processing
+Ellwood Commercial - 1 - https://ellwoodcommercial.com/property/1007-w-grand-avenue-oakland-ca/2 Ended Successfully
+Ellwood Commercial - 2 - https://ellwoodcommercial.com/property/6699-telegraph-avenue-2320-woolsey-berkeley-ca/3 Started Processing
+Ellwood Commercial - 1 - https://ellwoodcommercial.com/property/1007-w-grand-avenue-oakland-ca/2 Started Processing
+Ellwood Commercial - 1 - https://ellwoodcommercial.com/property/1007-w-grand-avenue-oakland-ca/2 Ended Successfully
+Ellwood Commercial - 2 - https://ellwoodcommercial.com/property/6699-telegraph-avenue-2320-woolsey-berkeley-ca/3 Started Processing
+Ellwood Commercial - 2 - https://ellwoodcommercial.com/property/6699-telegraph-avenue-2320-woolsey-berkeley-ca/3 Ended Successfully
+Ellwood Commercial - 3 - https://ellwoodcommercial.com/property/2633-telegraph-avenue-suite-103-104-oakland-ca/5 Started Processing
+Ellwood Commercial - 3 - https://ellwoodcommercial.com/property/2633-telegraph-avenue-suite-103-104-oakland-ca/5 Ended Successfully
+Ellwood Commercial - 4 - https://ellwoodcommercial.com/property/1345-grand-avenue-103-piedmont-ca/6 Started Processing
+Ellwood Commercial - 4 - https://ellwoodcommercial.com/property/1345-grand-avenue-103-piedmont-ca/6 Ended Successfully
+Ellwood Commercial - 5 - https://ellwoodcommercial.com/property/2938-webster-street-suite-100-oakland-ca/7 Started Processing
+Gateway Cities Council of Governments - 1 - 0014A14D-49E3-4340-8E9F-7160F2C31566 Started Processing
+Gateway Cities Council of Governments - 1 - https://properties.zoomprospector.com/gatewaycog/property/4658/0014A14D-49E3-4340-8E9F-7160F2C31566 Ended Successfully
+Gateway Cities Council of Governments - 2 - 002A9ED3-E86B-4CCA-A3BA-60090D7404A7 Started Processing
+Gateway Cities Council of Governments - 2 - https://properties.zoomprospector.com/gatewaycog/property/4658/002A9ED3-E86B-4CCA-A3BA-60090D7404A7 Ended Successfully
+Gateway Cities Council of Governments - 3 - 0050AFBE-F0D2-4205-A787-B195CEF1C582 Started Processing
+Gateway Cities Council of Governments - 1 - 0014A14D-49E3-4340-8E9F-7160F2C31566 Started Processing
+Gateway Cities Council of Governments - 1 - https://properties.zoomprospector.com/gatewaycog/property/4658/0014A14D-49E3-4340-8E9F-7160F2C31566 Ended Successfully
+Gateway Cities Council of Governments - 2 - 002A9ED3-E86B-4CCA-A3BA-60090D7404A7 Started Processing
+Gateway Cities Council of Governments - 2 - https://properties.zoomprospector.com/gatewaycog/property/4658/002A9ED3-E86B-4CCA-A3BA-60090D7404A7 Ended Successfully
+Gateway Cities Council of Governments - 3 - 0050AFBE-F0D2-4205-A787-B195CEF1C582 Started Processing
+Gateway Cities Council of Governments - 1 - 0014A14D-49E3-4340-8E9F-7160F2C31566 Started Processing
+Gateway Cities Council of Governments - 1 - 0014A14D-49E3-4340-8E9F-7160F2C31566 Started Processing
+Gateway Cities Council of Governments - 1 - 0014A14D-49E3-4340-8E9F-7160F2C31566 Started Processing
+Gateway Cities Council of Governments - 1 - 0014A14D-49E3-4340-8E9F-7160F2C31566 Started Processing
+Gateway Cities Council of Governments - 1 - https://properties.zoomprospector.com/gatewaycog/property/4658/0014A14D-49E3-4340-8E9F-7160F2C31566 Ended Successfully
+Gateway Cities Council of Governments - 2 - 002A9ED3-E86B-4CCA-A3BA-60090D7404A7 Started Processing
+Gateway Cities Council of Governments - 2 - https://properties.zoomprospector.com/gatewaycog/property/4658/002A9ED3-E86B-4CCA-A3BA-60090D7404A7 Ended Successfully
+Gateway Cities Council of Governments - 3 - 0050AFBE-F0D2-4205-A787-B195CEF1C582 Started Processing
+Gateway Cities Council of Governments - 3 - https://properties.zoomprospector.com/gatewaycog/property/4658/0050AFBE-F0D2-4205-A787-B195CEF1C582 Ended Successfully
+Gateway Cities Council of Governments - 4 - 00543D23-4594-4FEC-9FF3-B6D706E17361 Started Processing

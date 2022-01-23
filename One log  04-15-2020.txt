@@ -1,0 +1,6 @@
+2020-04-15 12:25:11 - https://transwestern.com/properties -----Start----- 
+https://transwestern.com/property/bbk-la-mirada-industrial####https://transwestern.com/property/central-tower####https://transwestern.com/property/one-california-plaza####https://transwestern.com/property/bank-of-america-plaza####https://transwestern.com/property/626-wilshire-blvd####https://transwestern.com/property/wilshire-serrano-bldg####https://transwestern.com/property/gramercy-plazaLength - 7
+-------End------
+2020-04-15 09:57:28 - http://looplink.voitco.com/SearchResults -----Start----- 
+4369355####15485043####19221499####19218553####19211290####19179032####19150627####19149698####19130172####19081545####19081192####19055219####19054341####19049429####19048951####19048884####19001677####18996682####18995959####18987135####18935194####18923593####18911473####18905120####18899026####18898981####18898959####18889313####18889213####18889093####18888532####18884115####18834584####18832628####18821721####18821623####18819628####18817117####18817013####18815508####18807718####18806984####18806534####18805110####18802131####18802093####18747474####18747458####18747329####18747241####18740933####18740533####18739902####18739834####18732717####18716730####18716675####18714642####18711443####18680946Length - 60
+-------End------

@@ -1,0 +1,4 @@
+Cypress RetailSyntaxError: missing ) after argument list
+Westland Retailhttps://westlandretailproperties.com/seven-trees/
+Red Properties - https://www.reddevelopment.com/properties/fullerton-town-center/
+Red Properties - https://www.reddevelopment.com/properties/greenway-station/

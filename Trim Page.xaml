@@ -1,0 +1,646 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Trim_Page" this:Trim_Page.mailOrPage="P" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="websiteName" Type="InArgument(x:String)" />
+    <x:Property Name="webData" Type="InOutArgument(x:String)" />
+    <x:Property Name="mailOrPage" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1123,2791</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Trim_Page_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Trim Page" sap:VirtualizedContainerService.HintSize="1081,2626" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <If Condition="[mailOrPage.Equals(&quot;P&quot;)]" sap:VirtualizedContainerService.HintSize="1039,2534" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[websiteName]" sap:VirtualizedContainerService.HintSize="497,489" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+          <Switch.Default>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,256" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim finalBody As String&#xA;If Split(fileContent,&quot;&lt;h2&gt;Summary Description&lt;/h2&gt;&quot;).Length = 2 Then&#xA; fileContent = Split(fileContent,&quot;Summary Description&quot;)(1) &#xA;End If&#xA;finalBody = Split(fileContent,&quot;Other Listings&quot;)(0)&#xA;finalBody = Split(finalBody ,&quot;Similar Listings&quot;)(0)&#xA;finalBody = Split(finalBody ,&quot;For more information, contact:&quot;)(0)&#xA;fileContent = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+                <ui:InvokeCode.Arguments>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="fileContent">[webData]</InOutArgument>
+                </ui:InvokeCode.Arguments>
+              </ui:InvokeCode>
+            </Sequence>
+          </Switch.Default>
+          <x:Null x:Key="CBM" />
+          <x:Null x:Key="Brixmor" />
+          <Assign x:Key="Radius Commercial" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[webData]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[webData.Replace("amp;","")]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Illi CRE" Code="Dim finalBody As String&#xA;If Split(fileContent,&quot;&lt;h2&gt;Summary Description&lt;/h2&gt;&quot;).Length = 2 Then&#xA; fileContent = Split(fileContent,&quot;Summary Description&quot;)(1) &#xA;End If&#xA;finalBody = Split(fileContent,&quot;Other Listings&quot;)(0)&#xA;finalBody = Split(finalBody ,&quot;Similar Listings&quot;)(0)&#xA;fileContent = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_100">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="fileContent">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <Sequence x:Key="Cushman-Email" sap:VirtualizedContainerService.HintSize="376,256" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim finalBody As String&#xA;If Split(fileContent,&quot;&lt;h2&gt;Summary Description&lt;/h2&gt;&quot;).Length = 2 Then&#xA; fileContent = Split(fileContent,&quot;Summary Description&quot;)(1) &#xA;End If&#xA;finalBody = Split(fileContent,&quot;Other Listings&quot;)(0)&#xA;finalBody = Split(finalBody ,&quot;Similar Listings&quot;)(0)&#xA;finalBody = Split(finalBody ,&quot;For more information, contact:&quot;)(0)&#xA;fileContent = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_101">
+              <ui:InvokeCode.Arguments>
+                <InOutArgument x:TypeArguments="x:String" x:Key="fileContent">[webData]</InOutArgument>
+              </ui:InvokeCode.Arguments>
+            </ui:InvokeCode>
+          </Sequence>
+          <Sequence x:Key="Commercial Exchange" sap:VirtualizedContainerService.HintSize="376,256" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim finalBody As String&#xA;&#xA;finalBody = fileContent.Replace(&quot;/photos'&quot;,&quot;/photos.png'&quot;)&#xA;finalBody = finalBody.Replace(&quot;mobile' href=https://www.commercialex&quot;,&quot;&quot;)&#xA;finalBody = finalBody.Replace(&quot;'block' href=https://www.commercial&quot;,&quot;&quot;)&#xA;&#xA;&#xA;fileContent = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_105">
+              <ui:InvokeCode.Arguments>
+                <InOutArgument x:TypeArguments="x:String" x:Key="fileContent">[webData]</InOutArgument>
+              </ui:InvokeCode.Arguments>
+            </ui:InvokeCode>
+          </Sequence>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="The Edward Company" Code="Dim finalBody As String&#xD;&#xA;If Split(fileContent,&quot;&lt;h2&gt;Summary Description&lt;/h2&gt;&quot;).Length = 2 Then&#xD;&#xA; fileContent = Split(fileContent,&quot;Summary Description&quot;)(1) &#xD;&#xA;End If&#xD;&#xA;finalBody = Split(fileContent,&quot;Other Listings&quot;)(0)&#xD;&#xA;finalBody = Split(finalBody ,&quot;Similar Listings&quot;)(0)&#xD;&#xA;fileContent = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_106">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="fileContent">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+        </Switch>
+      </If.Then>
+      <If.Else>
+        <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[websiteName]" sap:VirtualizedContainerService.HintSize="497,2374" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="CBM-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;&lt;https://gallery.mailchimp.com/&quot;)(1)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Trainor-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Email Preferences&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Ethan Conrad" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;SafeUnsubscribe™&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;&lt;https://imgssl.constantcontact.com/letters/images/sys/S.gif&gt;&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Coreland-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;View this email in your browser &lt;&quot;)(1)&#xA;finalBody = Split(finalBody,&quot;&gt;&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="SRS-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;&lt;http://staticapp.icpsc.com/icp/loadimage.php/mogile/1359702/fd1ca4efcb29976450235d8a14ccd59f/image/png&gt;&quot;)(1)&#xA;finalBody = Split(finalBody,&quot;CONTACT&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_6">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Real Estate Investment-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;.png&gt;&quot;)(1)&#xA;finalBody = Split(finalBody,&quot;For further information, please contact:&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_7">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Madison Partners-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;View this email in your browser&quot;)(1)&#xA;finalBody = Split(finalBody,&quot;&gt;&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_8">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="BRC Advisors-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;Contact:&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_9">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Growth Investment-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;&gt;&quot;)(1)&#xA;finalBody = Split(finalBody,&quot;sub_contactinfo.gif&gt;&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_10">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="CapRiv-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;For more information contact:&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_11">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="CBRE-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;to view with images&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_12">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Cushman-Email" Code="Dim finalBody As String&#xA;Try &#xA; If webData.IndexOf(&quot;View this email online&quot;) &gt; -1 Then&#xA;  finalBody = Split(webData,&quot;View this email online&quot;)(1)&#xA;  finalBody= Split(finalBody,&quot;This email has been sent&quot;)(0)&#xA;  finalBody =Split(finalBody,&quot;FOR MORE INFORMATION PLEASE CONTACT:&quot;)(0)&#xA;   finalBody = Split(webData,&quot;Privacy &amp; Permissions Policy&quot;)(0)&#xA;  finalBody= Split(finalBody,&quot;Privacy &amp; Permissions Policy&quot;)(0)&#xA;  finalBody= Split(finalBody,&quot;unsubscribe&quot;)(0)&#xA;  finalBody= Split(finalBody,&quot;Join the Conversation:&quot;)(0)&#xA;  finalBody= Split(finalBody,&quot;CONTACT US&quot;)(0)&#xA;  finalBody = Split(finalBody,&quot;For more information, contact:&quot;)(0)&#xA;  finalBody = Split(finalBody,&quot;For more information&quot;)(0)&#xA;  finalBody = Split(finalBody,&quot;For more information, please contact:&quot;)(0)&#xA;   finalBody =Split(finalBody,&quot;FOR MORE INFORMATION PLEASE CONTACT:&quot;)(0)&#xA;   finalBody =Split(finalBody,&quot;Forward This Email&quot;)(0)&#xA; Else&#xA;  finalBody = Split(webData,&quot;Privacy &amp; Permissions Policy&quot;)(0)&#xA;  finalBody= Split(finalBody,&quot;Privacy &amp; Permissions Policy&quot;)(0)&#xA;  finalBody= Split(finalBody,&quot;unsubscribe&quot;)(0)&#xA;  finalBody= Split(finalBody,&quot;Join the Conversation:&quot;)(0)&#xA;  finalBody= Split(finalBody,&quot;CONTACT US&quot;)(0)&#xA;  finalBody = Split(finalBody,&quot;For more information, contact:&quot;)(0)&#xA;  finalBody = Split(finalBody,&quot;For more information&quot;)(0)&#xA;  finalBody = Split(finalBody,&quot;For more information, please contact:&quot;)(0)&#xA;   finalBody =Split(finalBody,&quot;FOR MORE INFORMATION PLEASE CONTACT:&quot;)(0)&#xA;   finalBody =Split(finalBody,&quot;Forward This Email&quot;)(0)&#xA;  End If&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_13">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="GQNorth-Email" Code="Dim finalBody As String&#xA;&#xA;finalBody = Split(webData,&quot;Call or Email to Schedule an Appointment.&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_14">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="JLL-Email" Code="Dim finalBody As String&#xA;&#xA;finalBody = Split(webData,&quot;View Privacy Policy&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_15">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="KWCommercial-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;For more information contact:&quot;)(0)&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;________________________&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_16">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Lockehouse-Email" Code="Dim finalBody As String&#xA;&#xA;&#xA;finalBody = Split(webData,&quot;SafeUnsubscribe&quot;)(0)&#xA;Try&#xA; finalBody = Split(finalBody,&quot;@lockehouse.com&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_17">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Mueller Commercial-Email" Code="Dim finalBody As String&#xA;&#xA;finalBody = Split(webData,&quot;Unsubscribe rodney&quot;)(0)&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_18">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="NAI Capital-Email" Code="Dim finalBody As String&#xA;Try&#xA; finalBody = Split(webData,&quot;Stay Connected&quot;)(0) &#xA; finalBody = Split(finalBody,&quot;For more information contact:&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_19">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="North Gate-Email" Code="Dim finalBody As String&#xA;Try&#xA; finalBody = Split(webData,&quot;CONTACT NORTHGATE FOR MORE INFORMATION&quot;)(0) &#xA; finalBody = Split(finalBody,&quot;SafeUnsubscribe™ rwroller@comcast.net&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_20">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Progressive-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;SafeUnsubscribe™ rwroller&quot;)(0)&#xA; finalBody = Split(finalBody,&quot;Unsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_21">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Gallelli-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;SafeUnsubscribe™&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_22">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Argent-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;Copyright ©&quot;)(0)&#xA; finalBody = Split(finalBody,&quot;click here&quot;)(0)&#xA; finalBody = Split(finalBody,&quot;Click Here&quot;)(0)&#xA; finalBody = Split(finalBody,&quot;unsubscribe from this list&quot;)(0)&#xA; finalBody = Split(finalBody,&quot;why did I get this?&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_23">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Colliers-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;SafeUnsubscribe™&quot;)(0)&#xA; finalBody = Split(finalBody,&quot;This message was sent to&quot;)(0)&#xA; finalBody = Split(finalBody,&quot;Unsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_24">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Commercial Retail-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;SafeUnsubscribe™&quot;)(0)&#xA;  finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_25">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Core Commercial-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;@corecre.com&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;WWW.CORECRE.COM&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_26">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Derose Applebaum-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;OFFERED BY:&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;Unsubscribe&quot;)(0)&#xA;  finalBody= Split(finalBody,&quot;unsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_27">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Flocke Avoyer-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;@flockeavoyer.com&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;Manage your preferences&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_28">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Gordon Commercial-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;CONTACT:&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;Contact Us:&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_29">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="John Cublich-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;FOR MORE INFORMATION&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;Copyright&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_30">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Keegan Coppin-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;www.keegancoppin.com&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;Copyright&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_31">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Kidder Mathews-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody = Split(webData,&quot;@kiddermathews.com&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;UPDATE PREFERENCES&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_32">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Lee Associates-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody= Split(webData,&quot;FOR MORE INFORMATION CONTACT:&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;For more information contact:&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;SEE ALL LISTINGS&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_33">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Newmark Merrill-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody= Split(webData,&quot;newmarkmerrill.com&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;This email was sent to&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_34">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Premier Properties-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody= Split(webData,&quot;To view all of our listings click here&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;EXCLUSIVE AGENTS&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_35">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Prime Commercial-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody= Split(webData,&quot;The information in this e-mail&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;This email was sent to&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_36">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Retail California-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody= Split(webData,&quot;FOR MORE INFORMATION&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;Copyright&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_37">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Retail West-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody= Split(webData,&quot;Copyright&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;unsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_38">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="TRICommercial-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody= Split(webData,&quot;For more information contact:&quot;)(0)&#xA; finalBody= Split(finalBody,&quot;Unsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_39">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Turton-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody= Split(webData,&quot;Unsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_40">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Urban Lime-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody= Split(webData,&quot;Copyright&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_41">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="WCommercial-Email" Code="Dim finalBody As String&#xA;Try &#xA; finalBody= Split(webData,&quot;For more information contact:&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_42">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Generic-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;SafeUnsubscribe™&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Unsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;unsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;SafeUnsubscribe&quot;)(0)&#xA;finalBody= Split(finalBody,&quot;Copyright&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;For more information contact:&quot;)(0)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_44">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="CGIRetail-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;why did I get this?&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Unsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;unsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;@cgiretail.com &lt;mailto&quot;)(0)&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_45">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Conroy Commercial-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;SafeUnsubscribe™&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Unsubscribe&quot;)(0)&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_46">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Crossroad Ventures-Email" Code="Dim finalBody As String&#xA;finalBody = Split(webData,&quot;SafeUnsubscribe™&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_47">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Highland Partners-Email" Code="Dim finalBody As String&#xA;Try&#xA; If webData.IndexOf(&quot;Edit your subscription&quot;) &gt; 0 Then&#xA;finalBody = Split(webData,&quot;Forward &lt;http://highlandpartnerscorp.forwardtomyfriend.com&quot;)(1)&#xA;finalBody = Split(finalBody,&quot;Edit your subscription&quot;)(0)&#xA;Else&#xA; finalBody = Split(webData,&quot;www.highlandpartnerscorp.com &lt;http://www.highlandpartnerscorp.com&gt;&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;End If&#xA;&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_48">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Hot Spot-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Unsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_49">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Kimco Reality-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Unsubscribe&quot;)(0)&#xA;finalBody = Split(webData,&quot;For more information about&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_50">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Logic Commercial-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;@logicCRE.com&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_51">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Major Properties-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;For More Details&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;For More Information&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;@majorproperties.com&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_52">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="MEI Real Estate-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_53">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Merlone Geier-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_54">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Norheim Yost-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Copyright&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_55">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="PCG Commercial-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;For more information contact&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;FOR MORE INFORMATION CONTACT:&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_56">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Phillips Edison-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_57">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="PMZ Commercial-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_58">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Primestor-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;For additional Information contact:&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_59">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Radius-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Share this email:&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Opt out&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_60">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="ReMax-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_61">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="SC Properties-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Copyright &quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_62">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Strong Hayden-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Copyright &quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_63">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Spectrum-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Copyright &quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_64">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Sun Commercial-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Exclusively listed by&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_65">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="The Edward Company-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;View this email in your browser&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_66">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="The Legaspi Company-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;@thelegaspi.com&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_67">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Weingarten-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(webData,&quot;CONTACT:&quot;)(0)&#xA;finalBody = Split(webData,&quot;&lt;mailto:&quot;)(0)&#xA;&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_68">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Alfred Reality-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;why did I get this?&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_69">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Avision Young-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;@avisonyoung.com&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_70">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Central Commercial-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_71">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Coldwell Banker-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;cbclyle.net&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_72">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Herb liverett-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Connect with us&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_73">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Jackson Properties-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;STAY CONNECTED:&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_74">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Kennedy Wilson-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_75">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Kings Arch-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Copyright&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_76">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="May Reality Advisor-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Copyright&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_77">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Meadows RealEstate-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_78">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Millenia-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Website&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Contact Us&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_79">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Ophir Management-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_80">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="R C Brown-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;@RandCBrown.com&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Copyright&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_81">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Elizabeth Clark-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;VIEW MY LISTINGS&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_82">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Berkeley Side Nosh-Email" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;opyright&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Become a &quot;)(0)&#xA;finalBody = Split(finalBody,&quot; / Nosh Lists&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_83">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <Sequence x:Key="Loopnet-Email" sap:VirtualizedContainerService.HintSize="376,355" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Loopnet&quot;]" TopMost="True" />
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;View all listings that match your&quot;)(0)&#xA;Console.WriteLine(&quot;Final Body - &quot; + finalBody)&#xA;If Not finalBody.Contains(&quot;This listing was sent to you by&quot;) Then&#xA;&#x9;Console.WriteLine(&quot;Inside 1&quot;)&#xA;&#x9;finalBody = Split(finalBody,&quot;Manage Email Preferences&quot;)(0)&#xA;&#x9;finalBody = Split(finalBody,&quot;Your Saved Searches&quot;)(0)&#xA;&#x9;finalBody = finalBody.Remove(0,30)&#xA;&#x9;Console.WriteLine(&quot;Inside 1 out&quot;)&#xA;Else&#xA;&#x9;Console.WriteLine(&quot;Inside 2&quot;)&#xA;&#x9;finalBody = Split(finalBody,&quot;This listing was sent to you by&quot;)(0)&#xA;&#x9;finalBody = Split(finalBody,&quot;Manage Email Preferences&quot;)(0)&#xA;&#x9;finalBody = Split(finalBody,&quot;Your Saved Searches&quot;)(0)&#xA;&#x9;finalBody = finalBody.Remove(0,30)&#xA;&#x9;Console.WriteLine(&quot;Inside 2 oUT&quot;)&#xA;End If&#xA;If Not finalBody.Contains(&quot;Rodney,&quot;) Then&#xA;&#x9;Console.WriteLine(&quot;Inside 3&quot;)&#xA;&#x9;finalBody = Split(finalBody,&quot;Rodney,&quot;)(1)&#xA;&#x9;Console.WriteLine(&quot;Inside 3 out&quot;)&#xA;End If&#xA;&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(&quot;Loopnet Email code trim failed - &quot; + e.Message.ToString)&#xA;End Try&#xA;Console.WriteLine(&quot;Final Body Out - &quot; + finalBody)&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_84">
+              <ui:InvokeCode.Arguments>
+                <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+              </ui:InvokeCode.Arguments>
+            </ui:InvokeCode>
+          </Sequence>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="CBRE Investement-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;FEATURED &quot;)(0)&#xA;finalBody = Split(finalBody,&quot;CLICK FOR MORE INFO&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;RECENT NEWS&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_85">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Chain Storage Age-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;MOST POPULAR&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;CONTACT US&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;READ MORE&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_86">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="CIRE Partners-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;ontact Us&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_87">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Deborah Weinswig-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Forward to a Friend&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Facebook&quot;)(0)&#xA;finalBody = finalBody.Replace(&quot;http://li.voxmedia.com/click?&quot;,&quot;none&quot;)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_88">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Eater SF-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Forward to a Friend&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Facebook&quot;)(0)&#xA;finalBody = finalBody.Replace(&quot;http://li.voxmedia.com/&quot;,&quot;none&quot;)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_89">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="GlobeST-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Forward to a Friend&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Save the Date&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;GlobeSt.com&quot;)(1)&#xA;finalBody = finalBody.Replace(&quot;http://li.alm.com/&quot;,&quot;none&quot;)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_90">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Fast Casual-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Follow&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Advertisement&quot;)(1)&#xA;finalBody = Split(finalBody,&quot;Top Story&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_91">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Garrick Brown-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Connect with us&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Email Browser&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_92">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Hoodline Daily-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;About this email&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;ubscription&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = finalBody.Replace(&quot;https://us11.campaign-archive.com/&quot;,&quot;none&quot;)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_93">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Maurice Nieman-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;FEATURED PROPERTIES&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;FOR MORE INFORMATION&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;see it in your browser&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_94">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="NRN-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Manage Subscriptions&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;FOR MORE INFORMATION&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;NRN&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_95">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Plain Vanilla Shell-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;This email was sen&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;subscription&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;feature.gif&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_96">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="SRS Real Estate Partners-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;ABOUT SRS&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;SERVICES &lt;&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = finalBody.Replace(&quot;LinkedIn &lt;https://&quot;,&quot;none&quot;)&#xA;finalBody = finalBody.Replace(&quot;Twitter &lt;https://&quot;,&quot;none&quot;)&#xA;finalBody = finalBody.Replace(&quot;Facebook &lt;https://&quot;,&quot;none&quot;)&#xA;&#xA;finalBody = Split(finalBody,&quot;Top Story&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_97">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Vladimir Bosanac The Registry-Article" Code="Dim finalBody As String&#xA;Try&#xA;finalBody = Split(webData,&quot;Mailing Address&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;why did I get this&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Share &lt;&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;da179aff-7593-4145-b4b5-7c0fb806c23a.png&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_98">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Newmark Knight-Email" Code="Dim finalBody As String&#xA;Try&#xA;&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_99">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Eaters-Email" Code="Dim finalBody As String&#xA;Try&#xA;&#xA;finalBody = Split(webData,&quot;nsubscribe&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Facebook&quot;)(0)&#xA;finalBody =finalBody.Substring(265,finalBody.Length-266)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_102">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="Hoodline-Email" Code="Dim finalBody As String&#xA;Try&#xA;&#xA;finalBody = Split(webData,&quot;READ ALL OF HOODLINE&quot;)(0)&#xA;finalBody = Split(finalBody,&quot;Add us to your&quot;)(0)&#xA;finalBody =finalBody.Substring(100,finalBody.Length-101)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_103">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+          <ui:InvokeCode ContinueOnError="{x:Null}" x:Key="PVS-Email" Code="Dim finalBody As String&#xA;Try&#xA;&#xA;finalBody = Split(webData,&quot;Shopping Center Database Inc. values your privacy &quot;)(0)&#xA;&#xA;finalBody =finalBody.Substring(100,finalBody.Length-101)&#xA;finalBody = Split(finalBody,&quot;topstories.gif&gt;&quot;)(1)&#xA;Catch e As IndexOutOfRangeException&#xA; Console.WriteLine(e)&#xA;End Try&#xA;webData = finalBody" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_104">
+            <ui:InvokeCode.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="webData">[webData]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+        </Switch>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

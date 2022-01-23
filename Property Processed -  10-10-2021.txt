@@ -1,0 +1,12 @@
+Battaglia Commercial Real Estate - 1 - https://www.battagliare.com/listing/435-alisal-rd-solvang-ca/40 Started Processing
+Battaglia Commercial Real Estate - 1 - https://www.battagliare.com/listing/435-alisal-rd-solvang-ca/40 Ended Successfully
+Battaglia Commercial Real Estate - 2 - https://www.battagliare.com/listing/650-alamo-pintado-dr-101-solvang-ca/40 Started Processing
+CIM Group - 1 - https://cimgroup.propertycapsule.com/p/commercial-real-estate-listings/Orangeburg-NY-10962/1ramlandroadownerllcgen Started Processing
+CIM Group - 1 - https://cimgroup.propertycapsule.com/p/commercial-real-estate-listings/Orangeburg-NY-10962/1ramlandroadownerllcgen Ended Successfully
+CIM Group - 2 - https://cimgroup.propertycapsule.com/p/commercial-real-estate-listings/New+York-NY-10018/1440broadwaynyownerllcoff Started Processing
+CIM Group - 2 - https://cimgroup.propertycapsule.com/p/commercial-real-estate-listings/New+York-NY-10018/1440broadwaynyownerllcoff Ended Successfully
+CIM Group - 3 - https://cimgroup.propertycapsule.com/p/commercial-real-estate-listings/Los+Angeles-CA-90071/2cal Started Processing
+CIM Group - 3 - https://cimgroup.propertycapsule.com/p/commercial-real-estate-listings/Los+Angeles-CA-90071/2cal Ended Successfully
+CIM Group - 4 - https://cimgroup.propertycapsule.com/p/commercial-real-estate-listings/San+Francisco-CA-94124/400paulavenuesfownerllcgen Started Processing
+CIM Group - 4 - https://cimgroup.propertycapsule.com/p/commercial-real-estate-listings/San+Francisco-CA-94124/400paulavenuesfownerllcgen Ended Successfully
+CIM Group - 5 - https://cimgroup.propertycapsule.com/p/commercial-real-estate-listings/Chicago-IL-60605/440southlasallestreetchicagoownerllcoff Started Processing

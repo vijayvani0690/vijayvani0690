@@ -1,0 +1,15 @@
+2021-05-18 07:36:39 - Start -----Start----- 
+ 05-18-2021 07:36:39
+-------End------
+2021-05-18 07:54:17 - https://buildout.com/plugins/9a64a93980aeae8db347e72cdfa8ca61017acc9a/www.lee-associates.com/inventory/?pluginId=0&embedded=true&inventoryParentUrl=https://www.lee-associates.com/properties/&cacheSearch=true -----Start----- 
+####Length - 1
+-------End------
+2021-05-18 08:11:23 - Start -----Start----- 
+ 05-18-2021 08:11:22
+-------End------
+2021-05-18 08:14:00 - https://buildout.com/plugins/9a64a93980aeae8db347e72cdfa8ca61017acc9a/www.lee-associates.com/inventory/?pluginId=0&embedded=true&inventoryParentUrl=https://www.lee-associates.com/properties/&cacheSearch=true -----Start----- 
+855180-lease####852318-lease####567674-lease####891648-lease####852824-lease####543680-lease####743022-sale####879763-lease####417551-lease####861065-lease####425233-lease####730333-sale####730333-lease####15015-Fondren-Missouri-City-TX-77489-for-sale####891580-lease####220290-lease####1301Fannin####220307-lease####404595-lease####870522-sale####284105-sale####891514-sale####504322-sale####690199-lease####707825-lease####743777-sale####793451-lease####865438-sale####865439-lease####879585-sale####879585-lease####304889-lease####348961-sale####348961-lease####6400riversidedrive####350283-lease####753480-sale####6655DobbinRoad####891463-lease####415234-lease####891451-lease####816176-lease####745298-lease####891431-lease####891426-lease####874752-sale####816202-lease####575796-lease####0-FM-529-Road-Katy-Texas-77493-sale####890170-lease####4975-lacross-road####858886-lease####5640-rivers-ave-sale####5640-rivers-avenue####848021-lease####891360-sale####891340-sale####642040-lease####220291-lease####275315-sale####816234-lease####888974-sale####900-Threadneedle-Houston-TX-77079-lease####14701-Saint-Marys-Lane-Houston-TX-77079-lease####1155-Dairy-Ashford-Houston-TX-77079-lease####132961-lease####228415-lease####581622-lease####864980-lease####7710-C-southrail####220222-lease####331558-lease####450189-lease####510772-lease####669784-lease####690891-lease####731689-lease####761505-lease####776648-lease####779590-lease####797590-lease####817054-lease####830900-lease####851956-lease####851957-lease####879586-lease####765450-lease####780524-lease####804488-lease####821470-leaseLength - 90
+-------End------
+2021-05-18 08:31:11 - Start -----Start----- 
+ 05-18-2021 08:31:11
+-------End------

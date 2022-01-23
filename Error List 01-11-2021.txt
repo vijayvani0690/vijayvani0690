@@ -1,0 +1,4 @@
+Commercial West - https://www.commercialwest.com/anaheim-ca-platinum-triangle-22701-sq-ft/ -- TypeError: Cannot read property 'click' of null
+Commercial West - https://www.commercialwest.com/baldwin-park-ca-baldwin-park-towne-center-1411-2322-sq-ft/ -- TypeError: Cannot read property 'click' of null
+Commercial West - https://www.commercialwest.com/beaumont-ca-sand-gorgonio-village-new-development/ -- TypeError: Cannot read property 'click' of null
+Commercial West - https://www.commercialwest.com/cerritos-ca-cerritos-promenade-2207-5629-sq-ft/ -- TypeError: Cannot read property 'click' of null

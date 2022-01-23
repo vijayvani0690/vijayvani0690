@@ -1,0 +1,13 @@
+Progressive Real Estate - 1 - 2029-S-Hacienda-Blvd-Hacienda-Heights-CA-91745-lease-retail Started Processing
+Progressive Real Estate - 1 - 2029-S-Hacienda-Blvd-Hacienda-Heights-CA-91745-lease-retail Started Processing
+Progressive Real Estate - 1 - https://buildout.com/plugins/920e80d512e1d97388c3bc19fd0772ee1ff7a5f7/www.progressiverep.com/inventory/2029-S-Hacienda-Blvd-Hacienda-Heights-CA-91745-lease-retail?pluginId=0&iframe=true&embedded=true&cacheSearch=true Ended Successfully
+Progressive Real Estate - 2 - 11400-4th-st-rancho-cucamonga-ozel-plaza Started Processing
+Shopping Center Group - 1 - 738285-lease Started Processing
+Shopping Center Group - 1 - https://buildout.com/plugins/2739faa9bbd1c732648b05b6ec561fcec01e2622/www.theshoppingcentergroup.com/inventory/738285-lease?pluginId=0&iframe=true&embedded=true&cacheSearch=true Ended Successfully
+Shopping Center Group - 2 - 738289-lease Started Processing
+TRI Commercial - 1 - 855699-sale Started Processing
+TRI Commercial - 1 - 855699-sale Started Processing
+TRI Commercial - 1 - https://buildout.com/plugins/4d24ff217c26907aaaa12bb0837e451e568a61e4/www.tricommercial.com/inventory/855699-sale?pluginId=0&iframe=true&embedded=true&cacheSearch=true Ended Successfully
+TRI Commercial - 2 - 773318-sale Started Processing
+TRI Commercial - 2 - https://buildout.com/plugins/4d24ff217c26907aaaa12bb0837e451e568a61e4/www.tricommercial.com/inventory/773318-sale?pluginId=0&iframe=true&embedded=true&cacheSearch=true Ended Successfully
+TRI Commercial - 3 - 773318-lease Started Processing

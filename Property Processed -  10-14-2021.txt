@@ -1,0 +1,27 @@
+The Hawthorne Group - 1 - https://www.thgcommercial.com/properties-for-lease/301-battery-street/ Started Processing
+The Hawthorne Group - 1 - https://www.thgcommercial.com/properties-for-lease/301-battery-street/ Ended Successfully
+The Hawthorne Group - 2 - https://www.thgcommercial.com/properties-for-lease/1087-mission-street/ Started Processing
+The Hawthorne Group - 2 - https://www.thgcommercial.com/properties-for-lease/1087-mission-street/ Ended Successfully
+The Hawthorne Group - 3 - https://www.thgcommercial.com/properties-for-lease/1020-1028-kearny-street/ Started Processing
+The Hawthorne Group - 3 - https://www.thgcommercial.com/properties-for-lease/1020-1028-kearny-street/ Ended Successfully
+The Hawthorne Group - 4 - https://www.thgcommercial.com/properties-for-lease/1841-polk-street-2/ Started Processing
+Urban Property Team - San Diego - Colliers - 1 - https://www.crexi.com/lease/widgets/447/properties/264155/california-191-calle-magdalena Started Processing
+Urban Property Team - San Diego - Colliers - 1 - https://www.crexi.com/lease/widgets/447/properties/264155/california-191-calle-magdalena Ended Successfully
+Urban Property Team - San Diego - Colliers - 2 - https://www.crexi.com/lease/widgets/447/properties/291097/california-2411-el-cajon-blvd Started Processing
+Urban Property Team - San Diego - Colliers - 2 - https://www.crexi.com/lease/widgets/447/properties/291097/california-2411-el-cajon-blvd Ended Successfully
+Urban Property Team - San Diego - Colliers - 3 - https://www.crexi.com/lease/widgets/447/properties/290698/california-4th-j Started Processing
+Westcord - 1 - SyntaxError: Unexpected token 'catch' Started Processing
+Westcord - 1 - SyntaxError: Unexpected token 'catch' Ended Successfully
+Westcord - 1 - https://www.westcord.com/properties/171etownsgate/agoura-landmark-fjhh8 Started Processing
+Westcord - 1 - https://www.westcord.com/properties/171etownsgate/agoura-landmark-fjhh8 Started Processing
+Westcord - 1 - https://www.westcord.com/properties/171etownsgate/agoura-landmark-fjhh8 Ended Successfully
+Westcord - 2 - https://www.westcord.com/properties/171etownsgate/elcidplaza Started Processing
+Westcord - 2 - https://www.westcord.com/properties/171etownsgate/elcidplaza Ended Successfully
+Westcord - 3 - https://www.westcord.com/properties/171etownsgate/greenwich-village Started Processing
+CIBA Commercial Real Estate - 1 - https://www.cibarealestate.com/property/301-w-las-tunas-dr/#virtual_tour Started Processing
+CIBA Commercial Real Estate - 1 - https://www.cibarealestate.com/property/301-w-las-tunas-dr/#virtual_tour Ended Successfully
+CIBA Commercial Real Estate - 1 - https://www.cibarealestate.com/property/301-w-las-tunas-dr/#virtual_tour Started Processing
+CIBA Commercial Real Estate - 1 - https://www.cibarealestate.com/property/301-w-las-tunas-dr/#virtual_tour Ended Successfully
+CIBA Commercial Real Estate - 2 - https://www.cibarealestate.com/property/501-w-huntington-dr/ Started Processing
+CIBA Commercial Real Estate - 2 - https://www.cibarealestate.com/property/501-w-huntington-dr/ Ended Successfully
+CIBA Commercial Real Estate - 3 - https://www.cibarealestate.com/property/2540-2546-e-colorado-blvd/#virtual_tour Started Processing

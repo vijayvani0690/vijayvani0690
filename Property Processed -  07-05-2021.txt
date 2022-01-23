@@ -1,0 +1,30 @@
+Westmac - 1 - https://www.westmac.com/listings/2606-artesia-boulevard/ Started Processing
+Westmac - 1 - https://www.westmac.com/listings/2606-artesia-boulevard/ Ended Successfully
+Westmac - 2 - https://www.westmac.com/listings/8229-and-8235-santa-monica-boulevard/ Started Processing
+Westmac - 2 - https://www.westmac.com/listings/8229-and-8235-santa-monica-boulevard/ Ended Successfully
+Westmac - 3 - https://www.westmac.com/listings/5560-s-centinela/ Started Processing
+Westmac - 3 - https://www.westmac.com/listings/5560-s-centinela/ Ended Successfully
+Westmac - 4 - https://www.westmac.com/listings/1855-lincoln-boulevard/ Started Processing
+CIMLS - Commercial Real Esate Listing Service - 1 - https://www.cimls.com/lease-listing/467741/retail-1110-biddle-rd-Medford-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 1 - https://www.cimls.com/lease-listing/467741/retail-1110-biddle-rd-Medford-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 2 - https://www.cimls.com/lease-listing/467803/retail-970-Medford-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 2 - https://www.cimls.com/lease-listing/467803/retail-970-Medford-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 3 - https://www.cimls.com/lease-listing/467805/retail-860-biddle-rd-Medford-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 3 - https://www.cimls.com/lease-listing/467805/retail-860-biddle-rd-Medford-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 4 - https://www.cimls.com/lease-listing/467744/retail-890-biddle-rd-suite-101-Medford-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 4 - https://www.cimls.com/lease-listing/467744/retail-890-biddle-rd-suite-101-Medford-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 5 - https://www.cimls.com/lease-listing/461664/retail-476498-lancaster-dr-ne-Salem-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 5 - https://www.cimls.com/lease-listing/461664/retail-476498-lancaster-dr-ne-Salem-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 6 - https://www.cimls.com/lease-listing/461198/retail-2333-pacific-ave-Forest-Grove-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 6 - https://www.cimls.com/lease-listing/461198/retail-2333-pacific-ave-Forest-Grove-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 7 - https://www.cimls.com/lease-listing/459575/retail-120-hrubetz-rd-se-Salem-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 7 - https://www.cimls.com/lease-listing/459575/retail-120-hrubetz-rd-se-Salem-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 8 - https://www.cimls.com/lease-listing/467494/retail-4484-river-rd-n-Keizer-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 8 - https://www.cimls.com/lease-listing/467494/retail-4484-river-rd-n-Keizer-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 9 - https://www.cimls.com/lease-listing/467418/retail-1775-n-10th-street-Central-Point-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 9 - https://www.cimls.com/lease-listing/467418/retail-1775-n-10th-street-Central-Point-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 10 - https://www.cimls.com/lease-listing/446738/retail-5446-river-rd-n-Keizer-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 10 - https://www.cimls.com/lease-listing/446738/retail-5446-river-rd-n-Keizer-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 11 - https://www.cimls.com/lease-listing/464213/retail-109-e-ellendale-Dallas-OR Started Processing
+CIMLS - Commercial Real Esate Listing Service - 11 - https://www.cimls.com/lease-listing/464213/retail-109-e-ellendale-Dallas-OR Ended Successfully
+CIMLS - Commercial Real Esate Listing Service - 12 - https://www.cimls.com/lease-listing/466523/retail-4938-river-rd-n-Keizer-OR Started Processing

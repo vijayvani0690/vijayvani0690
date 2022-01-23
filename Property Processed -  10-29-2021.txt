@@ -1,0 +1,35 @@
+NAI NorCal - 1 - 818556-lease Started Processing
+NAI NorCal - 1 - https://buildout.com/plugins/1ac7a576d3934fa5e10e083de665de47617c2229/nainorcal.com/inventory/818556-lease?pluginId=0&iframe=true&embedded=true&cacheSearch=true Ended Successfully
+NAI NorCal - 2 - American-Industrial-Center-South-Building-2565-3rd-S-Suite-239-San-Francisco-lease Started Processing
+The Passman Group - 1 - https://thepassmangroup.com/properties/331-santa-monica-blvd-santa-monica-ca-90401-us Started Processing
+The Passman Group - 1 - https://thepassmangroup.com/properties/331-santa-monica-blvd-santa-monica-ca-90401-us Ended Successfully
+The Passman Group - 2 - https://thepassmangroup.com/properties/10580-wilshire-blvd-22ne-los-angeles-ca-90024-us Started Processing
+The Passman Group - 2 - https://thepassmangroup.com/properties/10580-wilshire-blvd-22ne-los-angeles-ca-90024-us Ended Successfully
+The Passman Group - 3 - https://thepassmangroup.com/properties/5702-w-pico-blvd-los-angeles-ca-90019-us Started Processing
+Washington Prime Group - 1 -  Started Processing
+Washington Prime Group - 1 -  Ended Successfully
+Washington Prime Group - 1 - https://washingtonprime.com/properties/portfolio/malibu-lumber-yard/default.aspx Started Processing
+Washington Prime Group - 1 - https://washingtonprime.com/properties/portfolio/malibu-lumber-yard/default.aspx Ended Successfully
+Washington Prime Group - 2 - https://washingtonprime.com/properties/portfolio/weberstown-mall/default.aspx Started Processing
+Washington Prime Group - 2 - https://washingtonprime.com/properties/portfolio/weberstown-mall/default.aspx Ended Successfully
+Washington Prime Group - 3 - https://washingtonprime.com/properties/portfolio/westminster-mall/default.aspx Started Processing
+Washington Prime Group - 3 - https://washingtonprime.com/properties/portfolio/westminster-mall/default.aspx Ended Successfully
+Watt Companies - 1 - https://www.wattcompanies.com/properties/property/highline-upland/ Started Processing
+Watt Companies - 1 - https://www.wattcompanies.com/properties/property/highline-upland/ Ended Successfully
+Watt Companies - 2 - https://www.wattcompanies.com/properties/property/alamitos-bay-long-beach-ca/ Started Processing
+Watt Companies - 2 - https://www.wattcompanies.com/properties/property/alamitos-bay-long-beach-ca/ Ended Successfully
+Watt Companies - 3 - https://www.wattcompanies.com/properties/property/alicia-towne-plaza-mission-viejo-ca-2/ Started Processing
+Watt Companies - 3 - https://www.wattcompanies.com/properties/property/alicia-towne-plaza-mission-viejo-ca-2/ Ended Successfully
+Watt Companies - 4 - https://www.wattcompanies.com/properties/property/asher-pointe-gardena/ Started Processing
+Watt Companies - 4 - https://www.wattcompanies.com/properties/property/asher-pointe-gardena/ Ended Successfully
+Watt Companies - 5 - https://www.wattcompanies.com/properties/property/balden-towne-plaza-fillmore-ca-2/ Started Processing
+Watt Companies - 5 - https://www.wattcompanies.com/properties/property/balden-towne-plaza-fillmore-ca-2/ Ended Successfully
+Watt Companies - 6 - https://www.wattcompanies.com/properties/property/baldwin-hills-shopping-center-los-angeles-ca/ Started Processing
+Woodmont Company - 1 - https://woodmont.com/portfolio-posts/columbia-gorge-outlets/ Started Processing
+Woodmont Company - 1 - https://woodmont.com/portfolio-posts/columbia-gorge-outlets/ Ended Successfully
+Woodmont Company - 2 - https://woodmont.com/portfolio-posts/frisco-plaza/ Started Processing
+W Real Estate - 1 - https://wrealestate.net/listing/CA/Beverly-Hills/9650-Cedarbrook-Drive-90210/138540792 Started Processing
+W Real Estate - 1 - https://wrealestate.net/listing/CA/Beverly-Hills/9650-Cedarbrook-Drive-90210/138540792 Ended Successfully
+W Real Estate - 2 - https://wrealestate.net/listing/CA/Beverly-Hills/1210-Benedict-Canyon-Drive-90210/141556184 Started Processing
+W Real Estate - 2 - https://wrealestate.net/listing/CA/Beverly-Hills/1210-Benedict-Canyon-Drive-90210/141556184 Ended Successfully
+W Real Estate - 3 - https://wrealestate.net/listing/CA/Los-Angeles/908-Bel-Air-Road-90077/131816957 Started Processing

@@ -1,0 +1,464 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Looplink_Argent" this:Looplink_Argent.isAutomation="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="automationData" Type="InArgument(x:String)" />
+    <x:Property Name="isAutomation" Type="InArgument(x:Boolean)" />
+    <x:Property Name="inputIDList" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1315,4759</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Looplink_Argent_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Looplink-Argent" sap:VirtualizedContainerService.HintSize="660,4594" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="C:\ProgramData\UiPath\Packages\looplink-cbre\" Name="baseFolder" />
+      <Variable x:TypeArguments="x:String" Name="destinationFolder" />
+      <Variable x:TypeArguments="x:TimeSpan" Name="delayTime" />
+      <Variable x:TypeArguments="s:String[]" Name="idList" />
+      <Variable x:TypeArguments="x:String" Name="url" />
+      <Variable x:TypeArguments="x:String" Name="finalUrl" />
+      <Variable x:TypeArguments="s:String[]" Name="pdfList" />
+      <Variable x:TypeArguments="x:String" Name="finalUrlPrefix" />
+      <Variable x:TypeArguments="x:String" Name="finalUrlSuffix" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="counter" />
+      <Variable x:TypeArguments="x:String" Name="cityJs" />
+      <Variable x:TypeArguments="x:String" Name="addressJs" />
+      <Variable x:TypeArguments="x:String" Name="idListJs" />
+      <Variable x:TypeArguments="x:String" Name="websiteName" />
+      <Variable x:TypeArguments="x:String" Name="pagesAvailable" />
+      <Variable x:TypeArguments="x:String" Name="nextButtonPath" />
+      <Variable x:TypeArguments="x:String" Name="nextButtonPath2" />
+      <Variable x:TypeArguments="x:String" Default="N" Name="prefixRequired" />
+      <Variable x:TypeArguments="x:String" Name="prefix" />
+      <Variable x:TypeArguments="x:String" Default="N" Name="suffixRequired" />
+      <Variable x:TypeArguments="x:String" Name="suffix" />
+      <Variable x:TypeArguments="x:String" Default="N" Name="relativePath" />
+      <Variable x:TypeArguments="x:String" Name="mainURL" />
+      <Variable x:TypeArguments="x:String" Name="webPageFiller" />
+      <Variable x:TypeArguments="x:String" Name="savePage" />
+      <Variable x:TypeArguments="x:String" Default="N" Name="directPDFDownload" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of String)]" Name="alreadyOpenedLinks" />
+      <Variable x:TypeArguments="x:String" Name="emailAccount" />
+      <Variable x:TypeArguments="x:String" Name="emailFolder" />
+      <Variable x:TypeArguments="x:String" Name="propertyTypeJS" />
+      <Variable x:TypeArguments="x:String" Name="pageExtractionJs" />
+      <Variable x:TypeArguments="x:String" Name="genericMailFormat" />
+      <Variable x:TypeArguments="s:String[]" Name="ignoreList" />
+      <Variable x:TypeArguments="sd:DataRow" Name="websiteMetaData" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="bidClerkCount" />
+      <Variable x:TypeArguments="x:String" Name="nextPageJs" />
+      <Variable x:TypeArguments="sd:DataTable" Name="excelDT" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of String)]" Name="websiteList" />
+      <Variable x:TypeArguments="s:String[]" Name="selectedWebsiteList" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Common-InitialSetup workflow" sap:VirtualizedContainerService.HintSize="618,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Common-InitialSetup.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InOutArgument x:TypeArguments="x:String" x:Key="baseFolder">[baseFolder]</InOutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="destinationFolder">[destinationFolder]</OutArgument>
+        <OutArgument x:TypeArguments="x:TimeSpan" x:Key="delayTime">[delayTime]</OutArgument>
+        <OutArgument x:TypeArguments="s:String[]" x:Key="pdfList">[pdfList]</OutArgument>
+        <OutArgument x:TypeArguments="s:String[]" x:Key="ignoreList">[ignoreList]</OutArgument>
+        <OutArgument x:TypeArguments="s:String[]" x:Key="importantList" />
+        <OutArgument x:TypeArguments="s:String[]" x:Key="dontSavePageList" />
+        <OutArgument x:TypeArguments="s:String[]" x:Key="delayList" />
+        <OutArgument x:TypeArguments="x:String" x:Key="emailAccount">[emailAccount]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="emailFolder">[emailFolder]</OutArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="isAutomation">[isAutomation]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:ReadRange AddHeaders="True" DataTable="[excelDT]" DisplayName="Read range" sap:VirtualizedContainerService.HintSize="618,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="Sheet1" WorkbookPath="AllURLs.xlsx" />
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[excelDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="618,404" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,256" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Default="0" Name="counterRow" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="websiteList.Add( websitename)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+              <ui:InvokeCode.Arguments>
+                <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="websiteList">[websiteList]</InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="websitename">[row(0).ToString]</InArgument>
+              </ui:InvokeCode.Arguments>
+            </ui:InvokeCode>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <Assign sap:VirtualizedContainerService.HintSize="618,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[websiteName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Split(automationData,"##")(0).ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="618,2923" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[excelDT]" DisplayName="For each row" sap:VirtualizedContainerService.HintSize="576,2831" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,2683" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If Condition="[row.Item(0).Equals(websiteName)]" sap:VirtualizedContainerService.HintSize="484,2591" sap2010:WorkflowViewState.IdRef="If_2">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="304,2414" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_31">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="sd:DataRow">[websiteMetaData]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="sd:DataRow">[row]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[idListJs]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(1).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[addressJs]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(2).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[cityJs]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(3).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(4).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[pagesAvailable]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(5).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[nextButtonPath]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(6).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[nextButtonPath2]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(7).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[prefixRequired]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(8).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[prefix]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(9).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[suffixRequired]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(10).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[suffix]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(11).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[relativePath]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(12).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[mainURL]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(13).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_23">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[webPageFiller]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(14).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_24">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[savePage]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(15).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_25">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[directPDFDownload]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(16).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_26">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[propertyTypeJS]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(17).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_27">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="s:String[]">[pdfList]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="s:String[]">[Split(row.Item(18).ToString,",")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_28">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[pageExtractionJs]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(19).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_29">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[genericMailFormat]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(20).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_30">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="s:String[]">[ignoreList]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="s:String[]">[Split(row.Item(21).ToString,",")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_32">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[nextPageJs]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row.Item(30).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:Break sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_2" />
+                  </Sequence>
+                </If.Then>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+      </ui:ForEachRow>
+    </Sequence>
+    <If Condition="[directPDFDownload.Equals(&quot;N&quot;)]" sap:VirtualizedContainerService.HintSize="618,741" sap2010:WorkflowViewState.IdRef="If_5">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="526,564" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If Condition="[websiteMetaData.Item(25).ToString.Length.Equals(0)]" sap:VirtualizedContainerService.HintSize="484,245" sap2010:WorkflowViewState.IdRef="If_7">
+            <If.Else>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Login to Website workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Login to Website.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="url">[websiteMetaData.Item(27).ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="userName">[websiteMetaData.Item(25).ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="password">[websiteMetaData.Item(26).ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="loginCodeJs">[websiteMetaData.Item(28).ToString]</InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </If.Else>
+          </If>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Extract-All-Ids-From-Search workflow" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Extract-All-Ids-From-Search - V5.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <OutArgument x:TypeArguments="s:String[]" x:Key="idList">
+                <mva:VisualBasicReference x:TypeArguments="s:String[]" ExpressionText="idList" />
+              </OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="url">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="url" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="idListJs">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="idListJs" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="pagesAvailable">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="pagesAvailable" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="nextButtonPath">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="nextButtonPath" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="nextButtonPath2">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="nextButtonPath2" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="nextPageCode">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="nextPageJs" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="isAutomation">
+                <Literal x:TypeArguments="x:Boolean" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="autmationData">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="automationData" />
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[inputIDList]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[String.Join("$$$$",idList)]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

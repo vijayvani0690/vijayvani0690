@@ -1,0 +1,4 @@
+Bidclerk - Skipped (Page Not Opened) - https://app.constructconnect.com/project/5468471/c?sourceType=3
+Bidclerk - https://app.constructconnect.com/project/5468471/c?sourceType=3 -- Cannot find the UI element corresponding to this selector: <wnd app='chrome.exe' cls='#32770' title='Save As' />
+Bidclerk - https://app.constructconnect.com/project/4688870/c?sourceType=3 -- Cannot find the UI element corresponding to this selector: <wnd app='chrome.exe' cls='#32770' title='Save As' />
+Bidclerk -  -- Image not found

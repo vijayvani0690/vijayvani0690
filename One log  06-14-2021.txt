@@ -1,0 +1,18 @@
+2021-06-14 08:42:30 - Start -----Start----- 
+ 06-14-2021 08:42:30
+-------End------
+2021-06-14 08:43:25 - http://www.cosol.net/property-search -----Start----- 
+&nbsp-##No City - Length - 1
+-------End------
+2021-06-14 08:56:37 - Start -----Start----- 
+ 06-14-2021 08:56:36
+-------End------
+2021-06-14 08:57:05 - http://www.cosol.net/property-search -----Start----- 
+####4965 South State Highway 99--Stockton##No City##http://www.cosol.net/files/6315/1606/2378/4965_S_HWY_99.pdf####HWY 108 & Willow Glen Oakdale##No City##http://www.cosol.net/files/1415/1606/2584/HWY_108__Willow_Glen.pdf####Airport & Wawona-Manteca##No City##http://www.cosol.net/files/1014/8848/4652/Ariport__Wawona.pdf - Length - 4
+-------End------
+2021-06-14 08:59:36 - Start -----Start----- 
+ 06-14-2021 08:59:36
+-------End------
+2021-06-14 08:59:58 - http://www.cosol.net/property-search -----Start----- 
+4965 South State Highway 99--Stockton##No City##http://www.cosol.net/files/6315/1606/2378/4965_S_HWY_99.pdf####HWY 108 & Willow Glen Oakdale##No City##http://www.cosol.net/files/1415/1606/2584/HWY_108__Willow_Glen.pdf####Airport & Wawona-Manteca##No City##http://www.cosol.net/files/1014/8848/4652/Ariport__Wawona.pdf - Length - 3
+-------End------

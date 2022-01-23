@@ -1,0 +1,63 @@
+2021-01-13 02:57:41 - Start -----Start----- 
+ 01-13-2021 02:57:41
+-------End------
+2021-01-13 02:58:41 - https://buildout.com/plugins/69c34c5b409dc6448832405f10ac56a5b91dbee0/www.haedrich.com/inventory/?pluginId=0&iframe=true&embedded=true&cacheSearch=true&=undefined -----Start----- 
+2150-ChurnCreekRoad-ForSale####11425-Reading-RedBluff-CA####1300-WestStreet-ForSale####1301-1317CourtSt-Redding-CA####1322-ButteStreet-Redding-CA####1724-WestStreet-ForSale####1915-PlacerStreet-Sale####2136-MarketSt-Redding-CA####2420-Sonoma-Redding-CA####705723-sale####2681-Hartnell-Redding-CA####786600-sale####2820-Freeman-Anderson-CA####2925-InnsbruckDrive-Redding####2925-Innsbruck-Redding-CA####3035-ArgyleRd-Redding-CA####821563-sale####359-360ParkMarinaCir-Redding-CA####3749-OldOregonTrail-Redding-CA####4090-Railroad-Redding-CA####7056-DanyeurRd-Sale####748-MainStreet-RedBluff####7740-Churn-Creek####Knollcrest-Hemsted-Redding-CA####808486-sale####5463-Airport-Redding-CA####1642-1710-ChurnCreek-Redding-CA####354-Hartnell-Redding-CA####Collyer-Redding-CA####2005-ChurnCreek-Redding-CALength - 30
+-------End------
+2021-01-13 03:05:44 - Start -----Start----- 
+ 01-13-2021 03:05:44
+-------End------
+2021-01-13 03:07:21 - http://www.muselli.net/Properties/Property_Search_Preview.aspx -----Start----- 
+Length - 1
+-------End------
+2021-01-13 03:19:30 - Start -----Start----- 
+ 01-13-2021 03:19:30
+-------End------
+2021-01-13 03:19:59 - http://www.muselli.net/Properties/Property_Search_Preview.aspx -----Start----- 
+https://muselli.net/for-sale-commercial-real-estate-special-purpose/18758####https://muselli.net/for-sale-commercial-real-estate-retail/18780####https://muselli.net/for-sale-commercial-real-estate-retail/18772####https://muselli.net/for-sale-commercial-real-estate-office/18722####https://muselli.net/for-sale-commercial-real-estate-retail/18768Length - 5
+-------End------
+2021-01-13 03:26:30 - Start -----Start----- 
+ 01-13-2021 03:26:30
+-------End------
+2021-01-13 03:27:10 - http://www.muselli.net/Properties/Property_Search_Preview.aspx -----Start----- 
+https://muselli.net/for-sale-commercial-real-estate-special-purpose/18758####https://muselli.net/for-sale-commercial-real-estate-retail/18780####https://muselli.net/for-sale-commercial-real-estate-retail/18772####https://muselli.net/for-sale-commercial-real-estate-office/18722####https://muselli.net/for-sale-commercial-real-estate-retail/18768Length - 5
+-------End------
+2021-01-13 03:31:57 - Start -----Start----- 
+ 01-13-2021 03:31:57
+-------End------
+2021-01-13 03:32:53 - https://www.newmarketadvisors.com/properties -----Start----- 
+Length - 1
+-------End------
+2021-01-13 04:07:09 - Start -----Start----- 
+ 01-13-2021 04:07:09
+-------End------
+2021-01-13 04:07:56 - https://www.newmarketadvisors.com/properties -----Start----- 
+https://newmarketadvisors.com/properties/80-s-martin-luther-king-blvd-freestanding-building-for-sale-or-lease/####https://newmarketadvisors.com/properties/alexander-road-rancho-drive-0-57-acres-for-ground-lease/####https://newmarketadvisors.com/properties/5025-bond-street-s-sec-tropicana-rogers/####https://newmarketadvisors.com/properties/delek-plaza-sale/####https://newmarketadvisors.com/properties/stephanie-street-power-center-573-north-stephanie-street/####https://newmarketadvisors.com/properties/stephanie-street-power-center-nwc-warm-springs-stephanie/####https://newmarketadvisors.com/properties/swc-warm-springs-gibson/####https://newmarketadvisors.com/properties/w-swc-volunteer-via-inspirada-955-983-volunteer-blvd/####https://newmarketadvisors.com/properties/union-village-nec-galleria-us-95/####https://newmarketadvisors.com/properties/80-s-martin-luther-king-blvd-freestanding-building-for-sale-or-lease/####https://newmarketadvisors.com/properties/alexander-road-rancho-drive-0-57-acres-for-ground-lease/####https://newmarketadvisors.com/properties/5025-bond-street-s-sec-tropicana-rogers/####https://newmarketadvisors.com/properties/delek-plaza-sale/####https://newmarketadvisors.com/properties/stephanie-street-power-center-573-north-stephanie-street/####https://newmarketadvisors.com/properties/stephanie-street-power-center-nwc-warm-springs-stephanie/####https://newmarketadvisors.com/properties/swc-warm-springs-gibson/####https://newmarketadvisors.com/properties/w-swc-volunteer-via-inspirada-955-983-volunteer-blvd/####https://newmarketadvisors.com/properties/union-village-nec-galleria-us-95/####https://newmarketadvisors.com/properties/sec-tropical-i-15/####https://newmarketadvisors.com/properties/meadowood-mall/####https://newmarketadvisors.com/properties/lake-mead-hollywood/####https://newmarketadvisors.com/properties/lake-mead-fiesta/####https://newmarketadvisors.com/properties/henderson-west/####https://newmarketadvisors.com/properties/galleria-mall-expansion/####https://newmarketadvisors.com/properties/flamingo-dean-martin/####https://newmarketadvisors.com/properties/craig-losee-w-nwc/####https://newmarketadvisors.com/properties/the-stop-i15-i-215/####https://newmarketadvisors.com/properties/sec-tropical-i-15/####https://newmarketadvisors.com/properties/meadowood-mall/####https://newmarketadvisors.com/properties/lake-mead-hollywood/####https://newmarketadvisors.com/properties/lake-mead-fiesta/####https://newmarketadvisors.com/properties/henderson-west/####https://newmarketadvisors.com/properties/galleria-mall-expansion/####https://newmarketadvisors.com/properties/flamingo-dean-martin/####https://newmarketadvisors.com/properties/craig-losee-w-nwc/####https://newmarketadvisors.com/properties/the-stop-i15-i-215/####https://newmarketadvisors.com/properties/legacy-golf-lifestyle-center-nec-wigwam-green-valley/####https://newmarketadvisors.com/properties/5335-s-fort-apache-swc-fort-apache-hacienda/####https://newmarketadvisors.com/properties/5150-mae-ann-ave-swc-mae-ann-mccarran/####https://newmarketadvisors.com/properties/5035-pyramid-way-swc-los-altos-pyramid/####https://newmarketadvisors.com/properties/desert-crossing-nec-desert-inn-decatur/####https://newmarketadvisors.com/properties/the-shoppes-at-harmon-square-swc-harmon-paradise/####https://newmarketadvisors.com/properties/4250-blue-diamond-parkway-nec-blue-diamond-arville/####https://newmarketadvisors.com/properties/4g-plaza-swc-charleston-lamb/####https://newmarketadvisors.com/properties/395-hughes-center-drive-n-nwc-flamingo-paradise/####https://newmarketadvisors.com/properties/legacy-golf-lifestyle-center-nec-wigwam-green-valley/####https://newmarketadvisors.com/properties/5335-s-fort-apache-swc-fort-apache-hacienda/####https://newmarketadvisors.com/properties/5150-mae-ann-ave-swc-mae-ann-mccarran/####https://newmarketadvisors.com/properties/5035-pyramid-way-swc-los-altos-pyramid/####https://newmarketadvisors.com/properties/desert-crossing-nec-desert-inn-decatur/####https://newmarketadvisors.com/properties/the-shoppes-at-harmon-square-swc-harmon-paradise/####https://newmarketadvisors.com/properties/4250-blue-diamond-parkway-nec-blue-diamond-arville/####https://newmarketadvisors.com/properties/4g-plaza-swc-charleston-lamb/####https://newmarketadvisors.com/properties/395-hughes-center-drive-n-nwc-flamingo-paradise/Length - 27
+-------End------
+2021-01-13 04:55:01 - Start -----Start----- 
+ 01-13-2021 04:55:01
+-------End------
+2021-01-13 05:02:11 - Start -----Start----- 
+ 01-13-2021 05:02:11
+-------End------
+2021-01-13 05:09:54 - www.PremierPaloAlto.com -----Start----- 
+Length - 1
+-------End------
+2021-01-13 05:11:33 - Start -----Start----- 
+ 01-13-2021 05:11:33
+-------End------
+2021-01-13 05:12:35 - www.PremierPaloAlto.com -----Start----- 
+Length - 1
+-------End------
+2021-01-13 05:20:32 - Start -----Start----- 
+ 01-13-2021 05:20:32
+-------End------
+2021-01-13 05:21:19 - https://www.premierpaloalto.com/properties -----Start----- 
+https://www.premierpaloalto.com/properties/1750-laurel-street/####https://www.premierpaloalto.com/properties/305-south-drive/####https://www.premierpaloalto.com/properties/299-california-avenue/####https://www.premierpaloalto.com/properties/413-lathrop-street/####https://www.premierpaloalto.com/properties/170-university-avenue/####https://www.premierpaloalto.com/properties/675-high-street/####https://www.premierpaloalto.com/properties/65-winslow-street/####https://www.premierpaloalto.com/properties/724-oak-grove-ave/####https://www.premierpaloalto.com/properties/3567-el-camino-real/####https://www.premierpaloalto.com/properties/217-alma-street/####https://www.premierpaloalto.com/properties/706-cowper-street/####https://www.premierpaloalto.com/properties/1510-s-winchester-blvd/####https://www.premierpaloalto.com/properties/616-ramona-street/####https://www.premierpaloalto.com/properties/2421-park-blvd/####https://www.premierpaloalto.com/properties/535-alma-street/####https://www.premierpaloalto.com/properties/1160-chestnut-street/####https://www.premierpaloalto.com/properties/835-page-mill-road/####https://www.premierpaloalto.com/properties/791-middlefield-road/####https://www.premierpaloalto.com/properties/200-california-avenue/####https://www.premierpaloalto.com/properties/2554-west-middlefield-road/####https://www.premierpaloalto.com/properties/364-366-castro-street/####https://www.premierpaloalto.com/properties/335-main-street/####https://www.premierpaloalto.com/properties/2741-middlefield-road/####https://www.premierpaloalto.com/properties/2105-old-middlefield-way/####https://www.premierpaloalto.com/properties/1260-marshall-st/####https://www.premierpaloalto.com/properties/2221-el-camino-real/####https://www.premierpaloalto.com/properties/2305-el-camino-real/####https://www.premierpaloalto.com/properties/117-119-university-ave/####https://www.premierpaloalto.com/properties/425-page-mill-road-palo-alto/####https://www.premierpaloalto.com/properties/1485-el-camino-real/####https://www.premierpaloalto.com/properties/1810-el-camino-real-redwood-city/####https://www.premierpaloalto.com/properties/1050-chestnut-street/####https://www.premierpaloalto.com/properties/405-waverley-street/####https://www.premierpaloalto.com/properties/645-high-street/####https://www.premierpaloalto.com/properties/203-forest-avenue/####https://www.premierpaloalto.com/properties/530-lytton-avenue/####https://www.premierpaloalto.com/properties/116-university-ave/####https://www.premierpaloalto.com/properties/719-santa-cruz-ave/####https://www.premierpaloalto.com/properties/532-ramona-street/####https://www.premierpaloalto.com/properties/390-lytton-ave/####https://www.premierpaloalto.com/properties/301-high-street/####https://www.premierpaloalto.com/properties/261-california-avenue/####https://www.premierpaloalto.com/properties/381-395-california-avenue/####https://www.premierpaloalto.com/properties/234-marshall-street/####https://www.premierpaloalto.com/properties/575-high-street/####https://www.premierpaloalto.com/properties/648-el-camino-real/Length - 46
+-------End------
+2021-01-13 05:28:46 - Start -----Start----- 
+ 01-13-2021 05:28:46
+-------End------
+2021-01-13 05:29:49 - http://weingartenrealty.propertycapsule.com/cre/commercial-real-estate-listings -----Start----- 
+Length - 1
+-------End------

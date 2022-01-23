@@ -1,0 +1,214 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Crexi_Sale_Search_flow" this:Crexi_Sale_Search_flow.searchString="Arizona" this:Crexi_Sale_Search_flow.propertyTypes="Retail,Hospitality" this:Crexi_Sale_Search_flow.fromDate="1/05/2022" this:Crexi_Sale_Search_flow.toDate="1/13/2022" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="searchString" Type="InArgument(x:String)" />
+    <x:Property Name="propertyTypes" Type="InArgument(x:String)" />
+    <x:Property Name="fromDate" Type="InArgument(x:String)" />
+    <x:Property Name="toDate" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1117,2195</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Crexi_Sale_Search_flow_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Crexi_Sale_Search_flow" sap:VirtualizedContainerService.HintSize="376,2130" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Click prop type" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" ScriptCode="function(e,inputParameter){&#xA;document.querySelector('crx-property-type-dropdown-new').querySelector('span').click();&#xA;//document.querySelector('crx-property-type-filter').querySelectorAll('.item.ng-star-inserted')[1].querySelector('input[type=\'checkbox\']').click();&#xA;}">
+      <ui:InjectJsScript.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b413ef2a1b7492a8e76286df5a5eabe7" Selector="&lt;html app='chrome.exe' title='Commercial Real Estate for Sale &amp;amp; Lease | Crexi.com' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:InjectJsScript.Target>
+    </ui:InjectJsScript>
+    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:InjectJsScript ScriptOutput="{x:Null}" DisplayName="Prop Type" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="InjectJsScript_2" InputParameter="[propertyTypes]" ScriptCode="function(e,inputParameter){&#xA;&#x9;&#xA;&#x9;var propertyTypeList = inputParameter.split(',');&#xA;&#x9;for(var i=0;i&lt;propertyTypeList.length;i++){&#xA;&#x9;&#x9;if(propertyTypeList[i]=='Retail'){&#xA;&#x9;&#x9;&#x9;//Retail&#xA;&#x9;&#x9;&#x9;document.querySelector('crx-property-type-filter').querySelectorAll('.item.ng-star-inserted')[1].querySelector('input[type=\'checkbox\']').click()&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;if(propertyTypeList[i]=='Multifamily'){&#xA;&#x9;&#x9;//Multifamily&#xA;&#x9;&#x9;document.querySelector('crx-property-type-filter').querySelectorAll('.item.ng-star-inserted')[2].querySelector('input[type=\'checkbox\']').click()&#xA;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;if(propertyTypeList[i]=='Office'){&#xA;&#x9;&#x9;&#x9;//Office&#xA;&#x9;&#x9;&#x9;document.querySelector('crx-property-type-filter').querySelectorAll('.item.ng-star-inserted')[3].querySelector('input[type=\'checkbox\']').click()&#xA;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;if(propertyTypeList[i]=='Industrial'){&#xA;&#x9;&#x9;&#x9;//Industrial&#xA;&#x9;&#x9;&#x9;document.querySelector('crx-property-type-filter').querySelectorAll('.item.ng-star-inserted')[4].querySelector('input[type=\'checkbox\']').click()&#xA;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;if(propertyTypeList[i]=='Hospitality'){&#xA;&#x9;&#x9;&#x9;//Hospitality&#xA;&#x9;&#x9;&#x9;document.querySelector('crx-property-type-filter').querySelectorAll('.item.ng-star-inserted')[5].querySelector('input[type=\'checkbox\']').click()&#xA;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;if(propertyTypeList[i]=='Mixed Use'){&#xA;&#x9;&#x9;&#x9;//Mixed Use&#xA;&#x9;&#x9;&#x9;document.querySelector('crx-property-type-filter').querySelectorAll('.item.ng-star-inserted')[6].querySelector('input[type=\'checkbox\']').click()&#xA;&#xA;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;if(propertyTypeList[i]=='Land'){&#xA;&#x9;&#x9;&#x9;//Land&#xA;&#x9;&#x9;&#x9;document.querySelector('crx-property-type-filter').querySelectorAll('.item.ng-star-inserted')[7].querySelector('input[type=\'checkbox\']').click()&#xA;&#xA;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;if(propertyTypeList[i]=='Special Purpose'){&#xA;&#x9;&#x9;&#x9;//Special Purpose&#xA;&#x9;&#x9;&#x9;document.querySelector('crx-property-type-filter').querySelectorAll('.item.ng-star-inserted')[8].querySelector('input[type=\'checkbox\']').click()&#xA;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;&#xA;&#x9;&#xA;&#x9;}&#xA;&#x9;&#xA;}">
+      <ui:InjectJsScript.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9d11c46eef792c672a284a731386273e" Selector="&lt;html app='chrome.exe' title='Commercial Real Estate for Sale &amp;amp; Lease | Crexi.com' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:InjectJsScript.Target>
+    </ui:InjectJsScript>
+    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="City" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[searchString]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6de30336b79f5eb1e109be3a98a24719" Selector="&lt;html app='chrome.exe' title='Commercial Real Estate for Sale*' /&gt;&lt;webctrl idx='1' name='search_term_string' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Search" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="8aa2aee42c5ad9f2ea901752ca0941ec" Selector="&lt;html app='chrome.exe' title='Commercial Real Estate for Sale*' /&gt;&lt;webctrl aaname='Search' idx='1' tag='BUTTON' type='button' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe  Freelancer'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='Freelancer' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
+    <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Image 'chrome.exe Search'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAoCAYAAACCV8YCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALBSURBVGhD7ZaxS3JRFMC/f8XdxanFRaRFWgQHB1EpkChwFm1S1E1EHGowIwRxyoSGdFAQEUHEQUcXiwwjlagkUs/HOWhYfC++eOe5dH5wwXfvuee9+/Ode98fENgQmYyITEZEJiMikxGRyYjIZERkMiIyGRGZjIhMRkQmIyKTEZHJiMhkRBOZiUQCdDrdp7azswPpdBqm0+kySht6vR5YLBZ6hk2jqcxMJgP1eh1KpRLs7e1R3+npKSwWi2UkP19lNptNum8+n6drLdFUJi5kRb/fB6vVCgcHB/D09LTs5edXyHx8fASHwwEulwtGoxHc3d1BKBQCo9FIze/3Ux+CWwFuCWazmfLY7Xa4vLykfpSynhv7AoHAR951mavYVcO48XismFstG5E5n8/h4uIC9Ho9CURpHo8Hdnd3odvtUtvf36e+h4cHyOVysLW1BVdXV3B/f09zfT4fTCaTH8m8vb2lrQbj4/E43SebzSrmVsvGDiBsNpuNFotCcEHtdns5A6DT6YDJZKKxVCpF4pPJJNzc3MBsNltGwY9kIhiH8TgP+S63WjQ/gAqFAmxvb9MBhKW+Pv6vhmPPz89wfHz8UYoGg4HerJeXF9Uyv8utFs3LHP/5k5MTusYSw5McF/b1zVwH57y/v1MsCsLF43z8Kvgq8/X1lcr0f2V+l1stG9kzh8Mh7Y+4SFwslheWvNPphEajAYPBgETjfopvDv4+PDykzyrc187Ozqg0a7UaVKtVyu31eqFSqUAkEqExJZmtVovGj46O4Pr6Gs7PzxVzq2UjMpFisUgPHQ6H4e3t7dNpjv1utxvK5TK9OSh7NYZ58JMKtwscw3KMRqNUnjgei8VIjpJMjA8Gg5QH/1CUq5RbLZrI/K2ITEZEJiMikxGRyYjIZERkMiIyGRGZjIhMRkQmIyKTEZHJiMhkRGSyAfAX4OwDC+jwq6AAAAAASUVORK5CYII=" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Search Commercial Real Estate for Sale | Crexi' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="All Filters" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4bf893adcf39845a64d2a5a005e84f46" Selector="&lt;html app='chrome.exe' title='Search Commercial Real Estate for Sale*' /&gt;&lt;webctrl aaname='All Filters(+1)' tag='BUTTON' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Custome Period" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0820b02c3e7bf5ac36b08d86facf391c" Selector="&lt;html app='chrome.exe' title='Search Commercial Real Estate for Sale*' /&gt;&lt;webctrl aaname='Custom Time Period' parentname='listing-timeline-filter-period' tag='BUTTON' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="From date" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="[fromDate]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="762732a6ef77a676cbfe6d293df37e21" Selector="&lt;html app='chrome.exe' title='Search Commercial Real Estate for Sale*' /&gt;&lt;webctrl name='dateMin' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="To Date" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="False" Text="[toDate]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d7b568d72187e2f272363f45ff1c0824" Selector="&lt;html app='chrome.exe' title='Search Commercial Real Estate for Sale*' /&gt;&lt;webctrl name='dateMax' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6d4523002338e5c24c75193b82134327" Selector="&lt;html app='chrome.exe' title='Search Commercial Real Estate for Sale*' /&gt;&lt;webctrl aaname='Show*' tag='A' type='button' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Image 'chrome.exe Search'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAAAoCAYAAABQB8xaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALBSURBVGhD7Za/S3pRFMC//4p7i5OLS4SLtAgODlGiIKLQLOpkmJuINNRgigTi5A9oSAeFiAhCGnJ0sVBJTBF/IKknzkHD4mt8O+/5Hb7f84ELvnvPPe/dj+/c+36BwELEMRFxTEQcExHHRMQxEXFMRBwTEcdExDERcUxEHBMRx0TEMRFxTFQRF41GQaPRfGq7u7sQj8dhPB4vojZDrVYDo9FIz/A3UVXcxcUF3N7eQrFYBLvdTn3n5+cwn88XkerzVdz9/T3dN5vN0vWmUFUcPvSSer0OJpMJXC4X9Pv9Ra/6/HPiOp0O7O3twcHBAby+vkKj0YCjoyPQ6/XUvF4v9SFYzljWOzs7lMdisUAul6N+FLCaG/t8Pt9H3lVxy9hlw7hut7s2txI2Im42m0Emk4GtrS2ShYIcDgfYbDaoVqvUnE4n9bXbbUin06DT6eDy8hJarRbN9Xg80Ov1fiTu+fmZtguMj0QidJ9UKrU2txI2djhgM5vNtDBcPD78w8PDYgbA4+MjbG9v01gsFiPJJycn8PT0BNPpdBEFPxKHYBzG4zzku9xKUP1wyOfzYDAY6HDAcl0d/13DscFgAKenpx/lpNVq6Y0ZDoeKxX2XWwmqlyr+o2dnZ3SNZYInKi7i6xu3Cs55e3ujWJSBC8X5eDp/FTcajajU/lTcd7mVsJE97uXlhfYzXBAuDEsEy3Z/fx/u7u6g2WySVNz/8I3A3263mz5lcB9KJBJUXjc3N3B9fU25Dw8PoVwuw/HxMY2tE1epVGjc7/fD1dUVJJPJtbmVsBFxSKFQoAcMBoMwmUw+narYb7VaoVQq0RuBYpdjmAc/Y7DkcQxLKhQKUYnheDgcJhHrxGF8IBCgPPjnoch1uZWgirj/ERHHRMQxEXFMRBwTEcdExDERcUxEHBMRx0TEMRFxTEQcExHHRMSxAHgH8Hrl78vCTK4AAAAASUVORK5CYII=" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Search Commercial Real Estate for Sale | Crexi' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+  </Sequence>
+</Activity>

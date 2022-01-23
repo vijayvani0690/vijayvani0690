@@ -1,0 +1,86 @@
+[0502/194701.224:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0807/051344.417:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0902/051101.825:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0902/154440.306:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0902/164939.262:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0909/142714.382:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0220/170227.314:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0520/134956.191:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0728/145749.578:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0730/150916.051:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0807/162618.951:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0808/115406.252:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0808/144705.173:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0814/163204.806:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0814/164344.274:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
+[0107/165549.920:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0108/175530.865:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0205/155936.405:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0205/160758.250:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0205/161048.509:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0206/165105.245:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0411/171450.372:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0411/225814.319:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0411/225950.423:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0414/230131.824:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0423/221050.510:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0423/221241.157:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0510/203725.023:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0510/205428.947:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0510/210041.873:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0510/212644.067:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0513/201509.186:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0529/153745.877:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0529/185136.345:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0619/114236.840:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0627/145914.652:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0703/201316.615:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0703/202515.200:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0703/205156.301:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0703/212000.840:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0703/213116.928:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0706/211736.067:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0717/215917.178:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0717/222158.155:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0717/222318.416:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0717/222621.337:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0717/234615.371:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[1206/002358.300:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1206/175453.557:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1206/191536.099:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1206/195152.803:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1206/195446.485:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1206/200053.900:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1216/012742.821:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1221/013801.974:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1221/014425.618:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1221/015300.177:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1221/021105.576:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/014817.931:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/015425.335:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/020159.897:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/020945.600:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/024358.736:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/025449.143:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/150310.468:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/151311.204:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/154514.518:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/154653.314:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/155606.389:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/155733.671:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1226/003325.367:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[0108/224733.858:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[0113/151546.869:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0113/152932.811:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0113/161710.831:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0113/173849.185:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0116/195216.457:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[0116/195242.792:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0116/201134.683:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0116/201913.217:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[0116/202659.202:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0116/210042.236:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[0116/210829.629:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0116/233004.384:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[0116/234948.532:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[0119/234102.804:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

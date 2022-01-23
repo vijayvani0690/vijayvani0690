@@ -1,0 +1,409 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Print_PDF_Directly" this:Print_PDF_Directly.destinationFolder="C:\Users\User.RCCHN0042\Desktop\Roller project\prints\" this:Print_PDF_Directly.baseFolder="C:\ProgramData\UiPath\Packages\looplink-cbre\" this:Print_PDF_Directly.webPageFiller=" (WS) " xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="destinationFolder" Type="InArgument(x:String)" />
+    <x:Property Name="baseFolder" Type="InArgument(x:String)" />
+    <x:Property Name="pdfList" Type="InArgument(s:String[])" />
+    <x:Property Name="savePage" Type="InArgument(x:String)" />
+    <x:Property Name="addressJs" Type="InArgument(x:String)" />
+    <x:Property Name="cityJs" Type="InArgument(x:String)" />
+    <x:Property Name="relativePath" Type="InArgument(x:String)" />
+    <x:Property Name="mainURL" Type="InArgument(x:String)" />
+    <x:Property Name="webPageFiller" Type="InArgument(x:String)" />
+    <x:Property Name="emailAccount" Type="InArgument(x:String)" />
+    <x:Property Name="EmailFolder" Type="InArgument(x:String)" />
+    <x:Property Name="websiteName" Type="InArgument(x:String)" />
+    <x:Property Name="genericEmailFormat" Type="InArgument(x:String)" />
+    <x:Property Name="ignoreList" Type="InArgument(s:String[])" />
+    <x:Property Name="pageExtractionJs" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1193,4633</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Print_PDF_Directly_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Print PDF Directly" sap:VirtualizedContainerService.HintSize="1119,4468" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:GenericValue" Name="subFinalDestinationUrl" />
+      <Variable x:TypeArguments="x:Boolean" Name="alreadyFound" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of String)]" Name="alreadySavedLinks" />
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mails" />
+      <Variable x:TypeArguments="x:String" Name="emailDate" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="emailNumber" />
+      <Variable x:TypeArguments="x:Boolean" Name="ignoreFound" />
+      <Variable x:TypeArguments="x:String" Name="hostName" />
+      <Variable x:TypeArguments="x:Int32" Name="maxDownloads" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input dialog" sap:VirtualizedContainerService.HintSize="1077,92" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter maximum download" Title="Max Downloads">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:Int32">[maxDownloads]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1077,4244" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+      <DoWhile.Variables>
+        <Variable x:TypeArguments="x:Int32" Default="0" Name="mailCount" />
+      </DoWhile.Variables>
+      <DoWhile.Condition>[Not mailCount.Equals(0)]</DoWhile.Condition>
+      <Sequence DisplayName="Process Email in batch" sap:VirtualizedContainerService.HintSize="1031,4082" sap2010:WorkflowViewState.IdRef="Sequence_19">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:GetOutlookMailMessages Filter="{x:Null}" TimeoutMS="{x:Null}" Account="[emailAccount]" DisplayName="Get outlook mail messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="989,22" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="[EmailFolder]" MarkAsRead="True" Messages="[mails]" OnlyUnreadMessages="True" Top="5" />
+        <Assign sap:VirtualizedContainerService.HintSize="989,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[mailCount]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">[mails.Count]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For each emai" sap:VirtualizedContainerService.HintSize="989,3828" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[mails]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="snm:MailMessage">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="item" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body for email" sap:VirtualizedContainerService.HintSize="953,3694" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="regMatces" />
+                  <Variable x:TypeArguments="x:String" Name="mailContent" />
+                  <Variable x:TypeArguments="x:Int32" Default="1" Name="counter" />
+                  <Variable x:TypeArguments="sd:DataRow" Name="emailMetaData" />
+                  <Variable x:TypeArguments="x:Int32" Default="1" Name="pageNumber" />
+                  <Variable x:TypeArguments="x:Int32" Default="1" Name="bidClerkCount" />
+                  <Variable x:TypeArguments="x:Boolean" Name="savedApdf" />
+                  <Variable x:TypeArguments="x:Boolean" Default="False" Name="atLeast1PDFSaved" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="911,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[mailContent]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[item.Body.ToString]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:WriteTextFile DisplayName="Write text file" FileName="Temp.txt" sap:VirtualizedContainerService.HintSize="911,87" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[mailContent]" />
+                <Assign sap:VirtualizedContainerService.HintSize="911,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[emailDate]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[Split(Split(item.Headers("Date")," ")(0),"/")(2) + "-" + Split(Split(item.Headers("Date")," ")(0),"/")(0) + "-" + Split(Split(item.Headers("Date")," ")(0),"/")(1)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <If Condition="[Split(item.From.User,&quot;=&quot;).Length&gt;1]" sap:VirtualizedContainerService.HintSize="911,218" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If.Then>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[hostName]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Split(item.From.User,"=")(1)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </If.Then>
+                  <If.Else>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[hostName]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[item.From.Host]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </If.Else>
+                </If>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke getEmailMetaData workflow" sap:VirtualizedContainerService.HintSize="911,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="getEmailMetaData.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="emailHost">[hostName]</InArgument>
+                    <OutArgument x:TypeArguments="sd:DataRow" x:Key="emailMetaData">[emailMetaData]</OutArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="emailType">[websiteName]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <If Condition="[emailMetaData.Item(25).ToString.Length.Equals(0)]" sap:VirtualizedContainerService.HintSize="911,245" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If.Else>
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Login to Website workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Login to Website.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="url">[emailMetaData.Item(27).ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="userName">[emailMetaData.Item(25).ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="password">[emailMetaData.Item(26).ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="loginCodeJs">[emailMetaData.Item(28).ToString]</InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </If.Else>
+                </If>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Trim Page workflow" sap:VirtualizedContainerService.HintSize="911,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Trim Page.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="websiteName">[emailMetaData.Item(0).ToString]</InArgument>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="webData">[mailContent]</InOutArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="mailOrPage">M</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:WriteTextFile DisplayName="Write text file" FileName="After Trim.txt" sap:VirtualizedContainerService.HintSize="911,87" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[mailContent]" />
+                <If Condition="[emailMetaData.Item(0).ToString.Equals(&quot;Bidclerk-Email&quot;)]" sap:VirtualizedContainerService.HintSize="911,218" sap2010:WorkflowViewState.IdRef="If_5">
+                  <If.Then>
+                    <ui:Matches sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[mailContent]" IsBuilderTabModified="False" Pattern="View Project(.*?)&lt;(.*?)&gt;" RegexOption="IgnoreCase, Compiled" Result="[regMatces]" />
+                  </If.Then>
+                  <If.Else>
+                    <ui:Matches sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[mailContent]" IsBuilderTabModified="False" Pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.\*~#?&amp;//|=]*)" RegexOption="IgnoreCase, Compiled" Result="[regMatces]" />
+                  </If.Else>
+                </If>
+                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="911,1589" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[regMatces]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="875,1455" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:Boolean" Default="False" Name="pdfFound" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:AppendLine DisplayName="Append line" FileName="URL.txt" sap:VirtualizedContainerService.HintSize="833,87" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[item.ToString]" />
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CheckIfURLExists workflow" sap:VirtualizedContainerService.HintSize="833,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="CheckIfURLExists.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="s:String[]" x:Key="urlList">[Split(emailMetaData.Item(21).ToString,",")]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="url">[item.ToString]</InArgument>
+                            <OutArgument x:TypeArguments="x:Boolean" x:Key="urlFound">[ignoreFound]</OutArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="type" />
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CheckIfAlredyOpened workflow" sap:VirtualizedContainerService.HintSize="833,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="CheckIfAlredyOpened.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="s:String[]" x:Key="urlList">[alreadySavedLinks.ToArray]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="url">[item.ToString]</InArgument>
+                            <OutArgument x:TypeArguments="x:Boolean" x:Key="urlFound">[alreadyFound]</OutArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="type" />
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                        <If Condition="[Not ignoreFound And Not alreadyFound]" sap:VirtualizedContainerService.HintSize="833,705" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="797,528" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[emailMetaData.Item(0).ToString.Equals(&quot;Bidclerk-Email&quot;)]" sap:VirtualizedContainerService.HintSize="755,436" sap2010:WorkflowViewState.IdRef="If_4">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,278" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="bidClerkLinks" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Matches sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[item.ToString]" IsBuilderTabModified="False" Pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&amp;//=]*)" RegexOption="IgnoreCase, Compiled" Result="[bidClerkLinks]" />
+                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ProcessBidclerProject workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="ProcessBidclerProject.xaml">
+                                      <ui:InvokeWorkflowFile.Arguments>
+                                        <InArgument x:TypeArguments="x:String" x:Key="url">[bidClerkLinks(0).toString]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="baseFolder">[baseFolder]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="destinationFolder">[destinationFolder]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="mailDate">[emailDate]</InArgument>
+                                        <InOutArgument x:TypeArguments="x:Int32" x:Key="downloadCounter">[bidClerkCount]</InOutArgument>
+                                        <InArgument x:TypeArguments="x:Int32" x:Key="maxDownload">[maxDownloads]</InArgument>
+                                      </ui:InvokeWorkflowFile.Arguments>
+                                    </ui:InvokeWorkflowFile>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ProcessPage - V5 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ProcessPage - V5.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="url">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item.ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="destinationFolder">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="destinationFolder" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="baseFolder">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="baseFolder" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="s:String[]" x:Key="pdflist">
+                                        <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="Split(emailMetaData.Item(18).ToString,&quot;,&quot;)" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="id">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="counter.ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="addressJs">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(2).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="cityJs">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(3).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="relativePath">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(12).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="mainURL">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(13).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="webPageFiller">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(14).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="savePage">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(15).ToString" />
+                                      </InArgument>
+                                      <InOutArgument x:TypeArguments="scg:List(x:String)" x:Key="alreadySavedLinks">
+                                        <mva:VisualBasicReference x:TypeArguments="scg:List(x:String)" ExpressionText="alreadySavedLinks" />
+                                      </InOutArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="propertyTypeJS">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(17).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="fileDate">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailDate" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="websiteName">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(0).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="pageExtractionJs">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(19).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="genericEmailFormat">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(20).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:Int32" x:Key="emailNumber">
+                                        <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="emailNumber" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="s:String[]" x:Key="ignoreList">
+                                        <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="Split(emailMetaData.Item(21).ToString,&quot;,&quot;)" />
+                                      </InArgument>
+                                      <InOutArgument x:TypeArguments="x:Int32" x:Key="pageNumber">
+                                        <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="pageNumber" />
+                                      </InOutArgument>
+                                      <InOutArgument x:TypeArguments="x:Int32" x:Key="subIds">
+                                        <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="counter" />
+                                      </InOutArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="articleTitleJs">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(24).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="isArticle">
+                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailMetaData.Item(23).ToString" />
+                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="argument1" />
+                                      <InArgument x:TypeArguments="x:String" x:Key="articleDateJS" />
+                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="savedAPdf">
+                                        <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="savedApdf" />
+                                      </OutArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="websiteDelay">
+                                        <Literal x:TypeArguments="x:String" xml:space="preserve"> 00:00:00</Literal>
+                                      </InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </If.Then>
+                        </If>
+                        <If Condition="[savedApdf and Not atLeast1PDFSaved]" sap:VirtualizedContainerService.HintSize="833,237" sap2010:WorkflowViewState.IdRef="If_7">
+                          <If.Then>
+                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[atLeast1PDFSaved]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </If.Then>
+                        </If>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                </ui:ForEach>
+                <Assign sap:VirtualizedContainerService.HintSize="911,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="scg:List(x:String)">[alreadySavedLinks]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="scg:List(x:String)">[new List(Of String)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign sap:VirtualizedContainerService.HintSize="911,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[emailNumber]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[emailNumber +1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <If Condition="[Not atLeast1PDFSaved]" sap:VirtualizedContainerService.HintSize="911,264" sap2010:WorkflowViewState.IdRef="If_6">
+                  <If.Then>
+                    <ui:MoveOutlookMessage Account="[emailAccount]" DisplayName="Move Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_1" MailFolder="Failed" MailMessage="[item]" />
+                  </If.Then>
+                </If>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+        </ui:ForEach>
+      </Sequence>
+    </DoWhile>
+  </Sequence>
+</Activity>

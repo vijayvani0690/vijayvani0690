@@ -1,0 +1,12 @@
+2020-12-08 12:01:48 - Start -----Start----- 
+ 12-08-2020 12:01:48
+-------End------
+2020-12-08 12:07:01 - Start -----Start----- 
+ 12-08-2020 12:07:01
+-------End------
+2020-12-08 12:08:04 - Start -----Start----- 
+ 12-08-2020 12:08:04
+-------End------
+2020-12-08 12:09:03 - http://cbaidx.com/index.php?site_id=2295 -----Start----- 
+http://cba.cevadoidx.com/listing.php?sid=1226247&mls=627218&a=91&site_id=2295&page_current=1####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=627830&a=91&site_id=2295&page_current=1####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=620884&a=91&site_id=2295&page_current=1####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=630323&a=91&site_id=2295&page_current=1####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=632239&a=91&site_id=2295&page_current=1####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=629900&a=91&site_id=2295&page_current=1####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=623155&a=91&site_id=2295&page_current=1####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=630026&a=91&site_id=2295&page_current=1####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=628173&a=91&site_id=2295&page_current=1####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=632409&a=91&site_id=2295&page_current=1####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=627887&a=91&site_id=2295&page_current=2####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=631062&a=91&site_id=2295&page_current=2####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=632092&a=91&site_id=2295&page_current=2####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=623720&a=91&site_id=2295&page_current=2####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=596708&a=91&site_id=2295&page_current=2####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=632283&a=91&site_id=2295&page_current=2####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=598895&a=91&site_id=2295&page_current=2####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=582895&a=91&site_id=2295&page_current=2####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=603675&a=91&site_id=2295&page_current=2####http://cba.cevadoidx.com/listing.php?sid=1226247&mls=602116&a=91&site_id=2295&page_current=2Length - 20
+-------End------

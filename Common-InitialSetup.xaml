@@ -1,0 +1,144 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CBRE___Looplink" this:CBRE___Looplink.isAutomation="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="baseFolder" Type="InOutArgument(x:String)" />
+    <x:Property Name="destinationFolder" Type="OutArgument(x:String)" />
+    <x:Property Name="delayTime" Type="OutArgument(x:TimeSpan)" />
+    <x:Property Name="pdfList" Type="OutArgument(s:String[])" />
+    <x:Property Name="ignoreList" Type="OutArgument(s:String[])" />
+    <x:Property Name="importantList" Type="OutArgument(s:String[])" />
+    <x:Property Name="dontSavePageList" Type="OutArgument(s:String[])" />
+    <x:Property Name="delayList" Type="OutArgument(s:String[])" />
+    <x:Property Name="emailAccount" Type="OutArgument(x:String)" />
+    <x:Property Name="emailFolder" Type="OutArgument(x:String)" />
+    <x:Property Name="isAutomation" Type="InArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>770,1495.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>CBRE___Looplink_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CBRE - Looplink" sap:VirtualizedContainerService.HintSize="622,1330.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="config" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <If Condition="[Not isAutomation]" sap:VirtualizedContainerService.HintSize="580,214" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Have you saved the files?&quot;]" TopMost="True" />
+      </If.Then>
+    </If>
+    <ui:ReadTextFile Content="[config]" DisplayName="Read text file" FileName="[baseFolder + &quot;Config.txt&quot;]" sap:VirtualizedContainerService.HintSize="580,58.6666666666667" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:CreateFile ContinueOnError="{x:Null}" DisplayName="Create file" sap:VirtualizedContainerService.HintSize="580,22" sap2010:WorkflowViewState.IdRef="CreateFile_1" Name="[&quot;log-&quot; + Now.ToString(&quot;MM-dd-yyyy&quot;) + &quot;.txt&quot;]">
+      <ui:CreateFile.Path>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:CreateFile.Path>
+    </ui:CreateFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Write Log to File workflow" sap:VirtualizedContainerService.HintSize="580,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Write Log to File.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="website">
+          <Literal x:TypeArguments="x:String">Start</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="log">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot; &quot; + Now.ToString(&quot;MM-dd-yyyy hh:mm:ss&quot;)" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim configList As String() = Split(config,Environment.NewLine)&#xA;destinationFolder = Split(configList(0),&quot;##&quot;)(1)&#xA;delayTime = TimeSpan.Parse(Split(configList(1),&quot;##&quot;)(1))&#xA;baseFolder = Split(configList(2),&quot;##&quot;)(1)&#xA;emailAccount = Split(configList(3),&quot;##&quot;)(1)&#xA;emailFolder = Split(configList(4),&quot;##&quot;)(1)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="580,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="config">[config]</InArgument>
+        <OutArgument x:TypeArguments="x:TimeSpan" x:Key="delayTime">[delayTime]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="baseFolder">[baseFolder]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="destinationFolder">[destinationFolder]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="emailAccount">[emailAccount]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="emailFolder">[emailFolder]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetFilters workflow" sap:VirtualizedContainerService.HintSize="580,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="GetFilters.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="s:String[]" x:Key="pdfList">[pdflist]</OutArgument>
+        <OutArgument x:TypeArguments="s:String[]" x:Key="ignoreList">[ignoreList]</OutArgument>
+        <OutArgument x:TypeArguments="s:String[]" x:Key="delayList">[delayList]</OutArgument>
+        <OutArgument x:TypeArguments="s:String[]" x:Key="dontSavePageList">[dontSavePageList]</OutArgument>
+        <OutArgument x:TypeArguments="s:String[]" x:Key="importantList">[importantList]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="baseFolder">[baseFolder]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <If Condition="[Not isAutomation]" sap:VirtualizedContainerService.HintSize="580,366.666666666667" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open browser" Hidden="True" sap:VirtualizedContainerService.HintSize="434,212.666666666667" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="www.google.com">
+          <ui:OpenBrowser.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MinimizeWindow Window="{x:Null}" DisplayName="Minimize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MinimizeWindow_1" />
+              </Sequence>
+            </ActivityAction>
+          </ui:OpenBrowser.Body>
+        </ui:OpenBrowser>
+      </If.Then>
+    </If>
+  </Sequence>
+</Activity>

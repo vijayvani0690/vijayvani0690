@@ -1,0 +1,11 @@
+Z - Beyond The Creek - Restaurants - 1 - https://www.beyondthecreek.com/headlands-brewing-company-opens-at-lafayette-forge/ Started Processing
+Z - Beyond The Creek - Restaurants - 1 - https://www.beyondthecreek.com/headlands-brewing-company-opens-at-lafayette-forge/ Ended Successfully
+Z - Beyond The Creek - Restaurants - 2 - https://www.beyondthecreek.com/kiku-sushi-opens-in-lafayette/ Started Processing
+Z - Beyond The Creek - Restaurants - 1 - https://www.beyondthecreek.com/headlands-brewing-company-opens-at-lafayette-forge/ Started Processing
+Z - Beyond The Creek - Restaurants - 1 - https://www.beyondthecreek.com/headlands-brewing-company-opens-at-lafayette-forge/ Ended Successfully
+Z - Beyond The Creek - Restaurants - 2 - https://www.beyondthecreek.com/kiku-sushi-opens-in-lafayette/ Started Processing
+Z - Beyond The Creek - Restaurants - 2 - https://www.beyondthecreek.com/kiku-sushi-opens-in-lafayette/ Ended Successfully
+Z - Beyond The Creek - Restaurants - 3 - https://www.beyondthecreek.com/starbird-chicken-opens-at-encina-grande-in-walnut-creek/ Started Processing
+Z - Beyond The Creek - Retail - 1 - https://www.beyondthecreek.com/diablo-grills-opens-in-downtown-walnut-creek/ Started Processing
+Z - Beyond The Creek - Retail - 1 - https://www.beyondthecreek.com/diablo-grills-opens-in-downtown-walnut-creek/ Ended Successfully
+Z - Beyond The Creek - Retail - 2 - https://www.beyondthecreek.com/massage-chairs-more-opens-at-broadway-plaza-in-walnut-creek/ Started Processing

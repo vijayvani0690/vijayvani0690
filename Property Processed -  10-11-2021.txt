@@ -1,0 +1,18 @@
+JonesRE - 1 - https://www.jonesre.net/properties-1/santa-ana---13912-ponderosa-st Started Processing
+JonesRE - 1 - https://www.jonesre.net/properties-1/santa-ana---13912-ponderosa-st Ended Successfully
+JonesRE - 2 - https://www.jonesre.net/properties-1/laguna-beach---572-s-coast-hwy Started Processing
+JonesRE - 1 - https://www.jonesre.net/properties-1/santa-ana---13912-ponderosa-st Started Processing
+JonesRE - 1 - https://www.jonesre.net/properties-1/santa-ana---13912-ponderosa-st Ended Successfully
+JonesRE - 2 - https://www.jonesre.net/properties-1/laguna-beach---572-s-coast-hwy Started Processing
+JonesRE - 2 - https://www.jonesre.net/properties-1/laguna-beach---572-s-coast-hwy Ended Successfully
+Kennedy Wilson - 1 -  Started Processing
+Kennedy Wilson - 1 - https://looplink.kennedywilson.com/Listing/ Ended Successfully
+Kennedy Wilson - 1 - 24206119 Started Processing
+Kennedy Wilson - 1 - 24206119 Started Processing
+Kennedy Wilson - 1 - https://looplink.kennedywilson.com/Listing/24206119 Ended Successfully
+Kennedy Wilson - 2 - 24148825 Started Processing
+MEI Realty - 1 - 24144478 Started Processing
+MEI Realty - 1 - http://looplink.MEIRealty.com/xNet/Looplink/TmplEngine/ListingProfilePage.aspx?stid=MEI&LID=24144478&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+MEI Realty - 2 - 19949818 Started Processing
+MEI Realty - 2 - http://looplink.MEIRealty.com/xNet/Looplink/TmplEngine/ListingProfilePage.aspx?stid=MEI&LID=19949818&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+MEI Realty - 3 - 22864920 Started Processing

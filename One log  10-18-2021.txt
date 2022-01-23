@@ -1,0 +1,30 @@
+2021-10-18 10:38:13 - Start -----Start----- 
+ 10-18-2021 10:38:12
+-------End------
+2021-10-18 10:40:45 - Start -----Start----- 
+ 10-18-2021 10:40:45
+-------End------
+2021-10-18 10:41:48 - https://app.constructconnect.com/search?area=project -----Start----- 
+https://app.constructconnect.com/project/5576070/c?sourceType=3####https://app.constructconnect.com/project/5577995/c?sourceType=3####https://app.constructconnect.com/project/5558225/c?sourceType=3####https://app.constructconnect.com/project/5572234/c?sourceType=3####https://app.constructconnect.com/project/5575783/c?sourceType=3####https://app.constructconnect.com/project/5558333/c?sourceType=3Length - 6
+-------End------
+2021-10-18 03:37:42 - Start -----Start----- 
+ 10-18-2021 03:37:42
+-------End------
+2021-10-18 03:53:11 - Start -----Start----- 
+ 10-18-2021 03:53:11
+-------End------
+2021-10-18 03:53:41 - https://macco.org/available-properties/?unit-selector=sf&search-id=properties-search-filter&3=Retail -----Start----- 
+https://macco.org/properties/13555-bowman-road-suite-300/####https://macco.org/properties/4406-san-juan-ave-2/####https://macco.org/properties/4400-san-juan-ave-14/####https://macco.org/properties/2600-sunset-boulevard-suite-105/####https://macco.org/properties/2120-el-camino-ave-parking-lot/####https://macco.org/properties/7386-stockton-blvd-suite-e/####https://macco.org/properties/7386-stockton-blvd-suites-e-l-n/####https://macco.org/properties/2825-51-howe-avenue/####https://macco.org/properties/1680-fairgrounds-drive-suite-a/####https://macco.org/properties/1638-fairgrounds-dr-suite-a/Length - 10
+-------End------
+2021-10-18 04:20:43 - Start -----Start----- 
+ 10-18-2021 04:20:43
+-------End------
+2021-10-18 04:21:13 - http://mainandmaininc.com/landlord-advisory/ -----Start----- 
+ - Length - 1
+-------End------
+2021-10-18 04:27:40 - Start -----Start----- 
+ 10-18-2021 04:27:40
+-------End------
+2021-10-18 04:28:00 - http://mainandmaininc.com/landlord-advisory/ -----Start----- 
+Plaza West Covina##No City##http://mainandmaininc.com/wp-content/uploads/2021/08/Plaza-West-Covina-Leasing-Deck-7-21.pdf####Clairemont##No City##http://mainandmaininc.com/wp-content/uploads/2021/01/MM_9035-Clairemont_REV4.pdf####El Centro##No City##http://mainandmaininc.com/wp-content/uploads/2016/07/MM_El-Centro_Brochure.pdf####Mission Valley Land Restaurant##No City##http://mainandmaininc.com/wp-content/uploads/2016/07/MM_Mission-Valley-Land_Restaurant-Brochure.pdf####Lakeshore##No City##http://mainandmaininc.com/wp-content/uploads/2021/09/Lakeshore-Brochure_Retail_2021.pdf####Hazard Center East##No City##http://mainandmaininc.com/wp-content/uploads/2016/07/MM_7710-7750-Hazard-Center-East-Brochure.pdf####La Mesa##No City##http://mainandmaininc.com/wp-content/uploads/2016/07/La-Mesa_Brochure.pdf####Parkway Plaza##No City##http://mainandmaininc.com/wp-content/uploads/2016/07/MM_Parkway-Plaza_Single-Pages.pdf####Village Del Amo##No City##http://mainandmaininc.com/wp-content/uploads/2021/09/Village-Del-Amo-Leasing-Deck-090221.pdf - Length - 9
+-------End------

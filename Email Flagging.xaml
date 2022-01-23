@@ -1,0 +1,145 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Email_Flagging" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="414,1379" sap2010:WorkflowViewState.IdRef="Email_Flagging_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Email Flagging" sap:VirtualizedContainerService.HintSize="374,1299" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="noPdfsContent" />
+      <Variable x:TypeArguments="s:String[]" Name="npPdfsList" />
+      <Variable x:TypeArguments="str:Regex" Name="regEx" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadTextFile Content="[noPdfsContent]" DisplayName="Read text file" FileName="C:\ProgramData\UiPath\Packages\no-pdf-mails.txt" sap:VirtualizedContainerService.HintSize="352,59" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <Assign sap:VirtualizedContainerService.HintSize="352,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[npPdfsList]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[Split(noPdfsContent,vbCrLf)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="352,976" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[npPdfsList.ToArray]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="336,842" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'graphic'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ea82d33a03adc7f9779c22261c18b242" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='Inbox - vijaykanth.b@royalcyber.com - Outlook (Product Activatio*' /&gt;&lt;wnd cls='AfxWndW' title='FolderBar' /&gt;&lt;wnd cls='NetUINativeHWNDHost' title='NUIDocumentWindow' /&gt;&lt;wnd cls='NetUIHWND' /&gt;&lt;ctrl name='Close Search' role='push button' /&gt;&lt;ctrl role='graphic' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'RICHEDIT60W'" EmptyField="True" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" SimulateType="False" Text="[System.Text.RegularExpressions.Regex.Replace(item.ToString,&quot;[!,-,&amp;,_,*,@,$,%,\,]&quot;,&quot;&quot;) + &quot;[k(enter)]&quot;]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="072b348089adcb05413cb1454768ba78" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='Inbox *' /&gt;&lt;wnd cls='AfxWndW' title='FolderBar' /&gt;&lt;wnd cls='NetUINativeHWNDHost' title='NUIDocumentWindow' /&gt;&lt;wnd aaname='Search Query' cls='RICHEDIT60W' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:WaitImageVanish ContinueOnError="True" DisplayName="Wait Image Vanish 'OUTLOOK.EXE Inbox'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitImageVanish_1">
+              <ui:WaitImageVanish.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAbCAYAAAAu/JKTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGPSURBVFhH7ZWBkcQgCEWvdLuwCpuwiDSRIjhREYzKeZfszuwNf2YnuwQBH+h+gWkpg6PI4CgyOIoMjiKDo8jgKDI4igyOok04BwTnwNWPj2e1P6gzgvcRhshHADezv0FbcI7gIBz1x6uUILwE+g1twDkh+gkc7DRNU+vsfMKO4CHGNAEuPdE0WXtGn3LwesqX11Zm5fvos8p7V3vHCkfbhVQCKRXTgCA8LpoKLpvN3zJc13aCfrzhohLD+5qjTRHaKW+NQ3VgTTlmsY9572v/Qs7dLpvCAqhLrYOXY8EdRxgMFteOne2BsY9sQh+n5Vvmva99OKjarVl3epvYCEIVzrO1V592x7XpSFr4DHkfvLz/DIePSRHaqINYuLxLZGevv7O67vNR6nwHH55isue8uS56f31mt239AAeD8vHhe0faa1JxyYbIXR7/6XCq6toKsPcR3cdmYLz0bukj8nq8t0ox74DzSULovweg6bPhiKmhCXtS/2hynpfBUWRwFBkcRQZHkcFRZHAUGZylAL4B0kcmkdewVzQAAAAASUVORK5CYII=" />
+              </ui:WaitImageVanish.Image>
+              <ui:WaitImageVanish.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='mspaint.exe' cls='MSPaintApp' title='Untitled - Paint' /&gt;" TimeoutMS="30000" WaitForReady="INTERACTIVE" />
+              </ui:WaitImageVanish.Target>
+            </ui:WaitImageVanish>
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'page tab  Home'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6afcb86dac9ef5cbbfd3a378d4db8f01" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='Inbox - vijaykanth.b@royalcyber.com - Outlook (Product Activatio*' /&gt;&lt;wnd cls='NetUIHWND' idx='1' /&gt;&lt;ctrl name='Ribbon' role='property page' /&gt;&lt;ctrl name='Ribbon Tabs' role='page tab list' /&gt;&lt;ctrl idx='1' name='Home' role='page tab' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2fc63a1fb8f7dfac3df9c6d4495e4b81" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='Inbox - vijaykanth.b@royalcyber.com - Outlook (Product Activatio*' /&gt;&lt;wnd cls='NetUIHWND' idx='1' /&gt;&lt;ctrl name='Ribbon' role='property page' /&gt;&lt;ctrl name='Lower Ribbon' role='pane' /&gt;&lt;ctrl name='Home' role='property page' /&gt;&lt;ctrl name='Tags' role='tool bar' /&gt;&lt;ctrl name='Unread/ Read' role='push button' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>

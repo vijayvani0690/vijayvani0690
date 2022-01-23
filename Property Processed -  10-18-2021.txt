@@ -1,0 +1,12 @@
+Bidclerk - 1 - https://app.constructconnect.com/project/5576070/c?sourceType=3 Started Processing
+Bidclerk - 1 - https://app.constructconnect.com/project/5576070/c?sourceType=3 Ended Successfully
+Bidclerk - 2 - https://app.constructconnect.com/project/5577995/c?sourceType=3 Started Processing
+Bidclerk - 2 - https://app.constructconnect.com/project/5577995/c?sourceType=3 Ended Successfully
+Bidclerk - 3 - https://app.constructconnect.com/project/5558225/c?sourceType=3 Started Processing
+MacLaughlin & Company - 1 - https://macco.org/properties/13555-bowman-road-suite-300/ Started Processing
+MacLaughlin & Company - 1 - https://macco.org/properties/13555-bowman-road-suite-300/ Ended Successfully
+MacLaughlin & Company - 2 - https://macco.org/properties/4406-san-juan-ave-2/ Started Processing
+MacLaughlin & Company - 2 - https://macco.org/properties/4406-san-juan-ave-2/ Ended Successfully
+MacLaughlin & Company - 3 - https://macco.org/properties/4400-san-juan-ave-14/ Started Processing
+MacLaughlin & Company - 3 - https://macco.org/properties/4400-san-juan-ave-14/ Ended Successfully
+MacLaughlin & Company - 4 - https://macco.org/properties/2600-sunset-boulevard-suite-105/ Started Processing

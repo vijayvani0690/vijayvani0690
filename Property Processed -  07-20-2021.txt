@@ -1,0 +1,27 @@
+NKF Retail - 1 - https://www.loopnet.com/Listing/3-Times-Sq-New-York-NY/3927067/?siteid=5075 Started Processing
+NKF Retail - 1 - http://www.loopnet.com/xNet/Looplink/tmplengine/ListingProfilePage.aspx?stid=ngkf/retail&LID=https://www.loopnet.com/Listing/3-Times-Sq-New-York-NY/3927067/?siteid=5075&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+NKF Retail - 2 - https://www.loopnet.com/Listing/One-World-Trade-Center-New-York-NY/4043898/?siteid=5075 Started Processing
+NKF Retail - 2 - http://www.loopnet.com/xNet/Looplink/tmplengine/ListingProfilePage.aspx?stid=ngkf/retail&LID=https://www.loopnet.com/Listing/One-World-Trade-Center-New-York-NY/4043898/?siteid=5075&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+NKF Retail - 3 - https://www.loopnet.com/Listing/1300-E-9th-St-Cleveland-OH/4088375/?siteid=5075 Started Processing
+NKF Retail - 3 - http://www.loopnet.com/xNet/Looplink/tmplengine/ListingProfilePage.aspx?stid=ngkf/retail&LID=https://www.loopnet.com/Listing/1300-E-9th-St-Cleveland-OH/4088375/?siteid=5075&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+NKF Retail - 4 - https://www.loopnet.com/Listing/5210-Pacific-Concourse-Dr-Los-Angeles-CA/8381314/?siteid=5075 Started Processing
+NKF Retail - 4 - http://www.loopnet.com/xNet/Looplink/tmplengine/ListingProfilePage.aspx?stid=ngkf/retail&LID=https://www.loopnet.com/Listing/5210-Pacific-Concourse-Dr-Los-Angeles-CA/8381314/?siteid=5075&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+NKF Retail - 5 - https://www.loopnet.com/Listing/10560-Arrowhead-Dr-Fairfax-VA/17794440/?siteid=5075 Started Processing
+NKF Retail - 5 - http://www.loopnet.com/xNet/Looplink/tmplengine/ListingProfilePage.aspx?stid=ngkf/retail&LID=https://www.loopnet.com/Listing/10560-Arrowhead-Dr-Fairfax-VA/17794440/?siteid=5075&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+NKF Retail - 6 - https://www.loopnet.com/Listing/8260-8280-Willow-Oaks-Corporate-Dr-Fairfax-VA/17794342/?siteid=5075 Started Processing
+NKF Retail - 6 - http://www.loopnet.com/xNet/Looplink/tmplengine/ListingProfilePage.aspx?stid=ngkf/retail&LID=https://www.loopnet.com/Listing/8260-8280-Willow-Oaks-Corporate-Dr-Fairfax-VA/17794342/?siteid=5075&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+NKF Retail - 7 - https://www.loopnet.com/Listing/6725-W-Sunset-Blvd-Los-Angeles-CA/20635399/?siteid=5075 Started Processing
+NKF Retail - 7 - http://www.loopnet.com/xNet/Looplink/tmplengine/ListingProfilePage.aspx?stid=ngkf/retail&LID=https://www.loopnet.com/Listing/6725-W-Sunset-Blvd-Los-Angeles-CA/20635399/?siteid=5075&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+NKF Retail - 8 - https://www.loopnet.com/Listing/7083-Hollywood-Blvd-Los-Angeles-CA/20635411/?siteid=5075 Started Processing
+NKF Retail - 8 - http://www.loopnet.com/xNet/Looplink/tmplengine/ListingProfilePage.aspx?stid=ngkf/retail&LID=https://www.loopnet.com/Listing/7083-Hollywood-Blvd-Los-Angeles-CA/20635411/?siteid=5075&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+NKF Retail - 9 - https://www.loopnet.com/Listing/2121-S-El-Camino-Real-San-Mateo-CA/20058991/?siteid=5075 Started Processing
+NKF Retail - 9 - http://www.loopnet.com/xNet/Looplink/tmplengine/ListingProfilePage.aspx?stid=ngkf/retail&LID=https://www.loopnet.com/Listing/2121-S-El-Camino-Real-San-Mateo-CA/20058991/?siteid=5075&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+NKF Retail - 10 - https://www.loopnet.com/Listing/7901-E-Lowry-Blvd-Denver-CO/17555659/?siteid=5075 Started Processing
+NKF Retail - 10 - http://www.loopnet.com/xNet/Looplink/tmplengine/ListingProfilePage.aspx?stid=ngkf/retail&LID=https://www.loopnet.com/Listing/7901-E-Lowry-Blvd-Denver-CO/17555659/?siteid=5075&LL=true&UOMListing=&UOMMoneyCurrency=&RentPer=PY&SRID=0&IP=false Ended Successfully
+NKF Retail - 11 - https://www.loopnet.com/Listing/2901-Douglas-Blvd-Roseville-CA/11151204/?siteid=5075 Started Processing
+NKF Retail - 1 - https://www.loopnet.com/Listing/3-Times-Sq-New-York-NY/3927067/?siteid=5075 Started Processing
+Cushman & Wakefield - Listings - 1 - https://www.cushmanwakefield.com/en/united-states/properties/for-lease/retail/ct/greenwich/1380-east-putnam-avenue/s120184928s120184942-l Started Processing
+Cushman & Wakefield - Listings - 1 - https://www.cushmanwakefield.com/en/united-states/properties/for-lease/retail/ct/greenwich/1380-east-putnam-avenue/s120184928s120184942-l Ended Successfully
+Cushman & Wakefield - Listings - 2 - https://www.cushmanwakefield.com/en/united-states/properties/for-lease/retail/ct/westport/69-main-street/s120014982s120015005-l Started Processing
+Cushman & Wakefield - Listings - 2 - https://www.cushmanwakefield.com/en/united-states/properties/for-lease/retail/ct/westport/69-main-street/s120014982s120015005-l Ended Successfully
+Cushman & Wakefield - Listings - 3 - https://www.cushmanwakefield.com/en/united-states/properties/for-lease/retail/ny/new-york/500-fifth-avenue/s120349832s120391848-l Started Processing

@@ -1,0 +1,110 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="714,1262" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ape="clr-namespace:App_Integration.PDF.Extensions;assembly=UiPathTeam.PDF.Extensions.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="476,1097.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="B" Name="input" />
+      <Variable x:TypeArguments="x:String" Name="code" />
+      <Variable x:TypeArguments="x:String" Name="filecontent" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Telegram.exe Telegram'" sap:VirtualizedContainerService.HintSize="434,372" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="c7af2c2212cb176b1453e142140c2ba9" Selector="&lt;wnd app='telegram.exe' cls='Qt5QWindowIcon' title='Telegram*' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,226" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'grouping'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="Hi">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="31622b36f78da26248a16c26dd8cf8e7" WaitForReady="INTERACTIVE" />
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+          </Sequence>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+    </ui:WindowScope>
+    <ape:ExtractPDFPages Password="{x:Null}" DisplayName="Extract PDF Pages" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="ExtractPDFPages_1" Range="2" SourceFile="C:\Users\User.RCCHN0042\Desktop\Roller project\prints\SWC Erringer Road &amp; Simi Valley Town Center Way 2019-08-09.pdf" />
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="434,531.333333333333" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="https://kidder.com/properties/single.html?listing=10349589&amp;property=160907">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,432.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" ContinueOnError="True" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" ScriptCode="function(e){&#xA;window.scrollTo(0,100);&#xA;return '';&#xA;}">
+              <ui:InjectJsScript.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+              </ui:InjectJsScript.Target>
+            </ui:InjectJsScript>
+            <ui:WaitImageAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="Find Image 'chrome.exe W'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+              <ui:WaitImageAppear.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAdCAYAAADxTtH0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAMwSURBVFhH7ZjdVqMwEMd58b7DwjNI6bW321JeQPuh9cbjlUpb1ssqLSTMJiFDPogFdW/2lJzzP5PJJEP4yQSqRymFS278/t/e3uDm5ga8qqrE4KXboigGGLoVZcI7qEv2GxiDpTWMQbU8QogxcMm+gDGo1gBDk1eWpegMtqxh/O9aLBbO8a/K419evHPeriEcjWDE5cewteLrSMVS5/of2rux87por6+vIUkS8Vntive1PWHcwxhhMAWzrRG/nyCMBHbO9d+36cxXuT+Zx2Ggnp6enHn6WAGjWyaM0ciHOFVxG4a59mfazYPO3DoMLl42rnld8k6nk+ictzYMpmjVxA0YzbpXiH1tvgTY5F2HTSxcy/E0Bl+O+dNXVX6a+Li9PxsGF5aNPq/LChjdUjACX/6lmMJ1HVcw5gLG6bRSZ4wlXHOiFWxw3SiEFYM3Q3gMakaJyqspiHdyT0ouGCheNvb8z/R1GPPMuok2jNVY+pON+EUo2kMk58zgVeal1QYikUdXAMkf9mUo4gCZViYZz8Mg2ftzQUB9CcbxeBQdblFtX4MRb4FmCQTS96cvBozt8QXmRnnYCmCeYn4CFUKSih74/arrb2OEwXO79+eCwMskyzLn/M98AaNbdwaMY0nVX4ydBX7zePMNr9vniyEGY6vlJvrTEcGGaDEmFwxbNojb21vnvC55eZ6LznlrwWDjJd1DYj8BfMP5rhnnJdVu7OdyqfIvsaRQ46VxfRuGa386iMfHx1a8rzVgoNp+G0ael0A35iNewyi1g28MS5nv+bf8Xvg1hRfMv7xq1kYTlStcqesbMOSYvT8OgZfFfr93xvv63sfHh+ictzqMVI0T/Y1Qbzhl40Q7U2xFGwqlWL+AKxxnBy3/B4vK5cP0ub5+ijBQ4aK1P14W5n6/Z38Gg1mivxEkjJydKezWWm8KfjhWpF63CHGcnRMVEfnMXFN4ZvMKuxwnd8b1/6X13t/fRQfl9tmpjxVPCiteNjGoKBTNerUGGweB+dlDJRt7jTb5CPNk47lE/kK8YptGSzkXr99n//38njAuwxcwBtUaYGjyDoeD6HCLulRfwBjEdYC/7F5yfcp7BLcAAAAASUVORK5CYII=" />
+              </ui:WaitImageAppear.Image>
+              <ui:WaitImageAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="10000" WaitForReady="INTERACTIVE" />
+              </ui:WaitImageAppear.Target>
+            </ui:WaitImageAppear>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Done&quot;]" TopMost="True" />
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>

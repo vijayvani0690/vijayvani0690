@@ -1,0 +1,61 @@
+{
+  "name": "Looplink Project",
+  "description": "Blank Project",
+  "main": "Main.xaml",
+  "dependencies": {
+    "PDF_Activities": "[1.0.2]",
+    "UiPath.Excel.Activities": "[2.3.6682.26635]",
+    "UiPath.Java.Activities": "[1.0.7053.27728]",
+    "UiPath.Mail.Activities": "[1.1.6562.21018]",
+    "UiPath.System.Activities": "[19.8.0]",
+    "UiPath.UIAutomation.Activities": "[18.3.6877.28298]",
+    "UiPathTeam.PDF.Extensions.Activities": "[2.3.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.7.0.0",
+  "projectVersion": "1.0.8056.22122",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "97eecc5d-34c6-436f-848a-055caf3875d4",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
